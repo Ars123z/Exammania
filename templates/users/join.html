@@ -1,0 +1,298 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+    <title>Your Page Title</title>
+    <style>
+        body {
+            background-image: url(/static/main/images/darkened.png);
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            color: white;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        .navbar {
+            background-color: orange;
+        }
+
+
+        .navbar-brand {
+            font-family: "Pacifico", cursive;
+            font-size: 30px;
+        }
+
+        li span {
+            font-size: 50px;
+        }
+
+        .card h1 {
+            font-size: 30px;
+        }
+
+        .container h1 {
+            font-size: 30px;
+            font-weight: bold;
+            justify-content: center;
+
+        }
+
+        .container p {
+            font-size: 20px;
+
+        }
+
+        .container {
+            margin: auto;
+            max-width: 700px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            background-color: orange;
+            color: white;
+            font-size: 24px;
+            padding: 10px 0;
+        }
+
+        .list-group-item {
+            padding: 10px 0;
+        }
+
+        .card-footer {
+            background-color: orange;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .btn-primary {
+            background-color: gray;
+            color: white;
+            border-radius: 25px;
+            border: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: white
+        }
+
+        .btn-primary:hover {
+            background-color: grey;
+            box-shadow: none;
+        }
+
+        a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Exammania</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'profile' %}">Your Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'main:index' %}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropstart"><a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                                    href="#">Jee
+                                    Mains</a>
+                                <ul class="dropdown-menu" style="max-height: 200px; overflow-y: scroll;">
+                                    <li><a href="{% url 'main:exam_solution' 'jee_mains' 2019 0 %}"
+                                            class="dropdown-item">Jee Mains
+                                            2004</a></li>
+                                    <li><a href="{% url 'main:exam_solution' 'jee_mains' 2019 0 %}"
+                                            class="dropdown-item">Jee Mains
+                                            2005</a></li>
+                                    <li><a href="{% url 'main:exam_solution' 'jee_mains' 2019 0 %}"
+                                            class="dropdown-item">Jee Mains
+                                            2006</a></li>
+                                    <li><a href="{% url 'main:exam_solution' 'jee_mains' 2019 0 %}"
+                                            class="dropdown-item">Jee Mains
+                                            2007</a></li>
+                                    <li><a href="{% url 'main:exam_solution' 'jee_mains' 2019 0 %}"
+                                            class="dropdown-item">Jee Mains
+                                            2008</a></li>
+                                    <li><a href="{% url 'main:exam_solution' 'jee_mains' 2019 0 %}"
+                                            class="dropdown-item">Jee Mains
+                                            2009</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropstart"><a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                                    href="#">Jee
+                                    Advanced</a>
+                                <ul class="dropdown-menu" style="max-height: 200px; overflow-y: scroll;">
+                                    <li><a href="{% url 'main:exam_solution' 'jee_mains' 2019 0 %}"
+                                            class="dropdown-item">Jee Advanced
+                                            2004</a></li>
+                                    <li><a href="{% url 'main:exam_solution' 'jee_mains' 2019 0 %}"
+                                            class="dropdown-item">Jee Advanced
+                                            2005</a></li>
+                                    <li><a href="{% url 'main:exam_solution' 'jee_mains' 2019 0 %}"
+                                            class="dropdown-item">Jee Advanced
+                                            2006</a></li>
+                                    <li><a href="{% url 'main:exam_solution' 'jee_mains' 2019 0 %}"
+                                            class="dropdown-item">Jee Advanced
+                                            2007</a></li>
+                                    <li><a href="{% url 'main:exam_solution' 'jee_mains' 2019 0 %}"
+                                            class="dropdown-item">Jee Advanced
+                                            2008</a></li>
+                                    <li><a href="{% url 'main:exam_solution' 'jee_mains' 2019 0 %}"
+                                            class="dropdown-item">Jee Advanced
+                                            2009</a></li>
+                                    <li><a href="{% url 'main:exam_solution' 'jee_mains' 2019 0 %}"
+                                            class="dropdown-item">Jee Advanced
+                                            2010</a></li>
+                                    <li><a href="{% url 'main:exam_solution' 'jee_mains' 2019 0 %}"
+                                            class="dropdown-item">Jee Advanced
+                                            2011</a></li>
+                                    <li><a href="{% url 'main:exam_solution' 'jee_mains' 2019 0 %}"
+                                            class="dropdown-item">Jee Advanced
+                                            2012</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'main:book_solution' %}">Book Solutions</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="subjectDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Notes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="subjectDropdown">
+                            <a class="dropdown-item" href="{% url 'main:notes' 'Physics' %}">Physics Notes</a>
+                            <a class="dropdown-item" href="{% url 'main:notes' 'Chemistry' %}">Chemistry Notes</a>
+                            <a class="dropdown-item" href="{% url 'main:notes' 'Maths' %}">Maths Notes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'videos_main' %}">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'question_list' %}">Ask</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'join' %}">Subscribe</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="subjectDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Test
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="subjectDropdown">
+                            <a class="dropdown-item" href="{% url 'main:generate_test' 'physics' %}">Physics</a>
+                            <a class="dropdown-item" href="{% url 'main:generate_test' 'chemistry' %}">Chemistry</a>
+                            <a class="dropdown-item" href="{% url 'main:generate_test' 'maths' %}">Math</a>
+                        </div>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container text-center mt-5">
+        <div class="row">
+            <h1 class="mt-3 ">Subscribe your Success!!</h1>
+            <p class="mt-2">Unlock Your Potential with Unlimited Access to Our Comprehensive Library of JEE and CBSE
+                School Board
+                Study
+                Materials and Tutorials!</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h1>Monthly</h1>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><span>&#8377;50/</span>MONTH</li>
+                        <li class="list-group-item"><i class="fas fa-check"></i> 24/7 Access to Courses</li>
+                        <li class="list-group-item"><i class="fas fa-check"></i> Live Q&A with Experts</li>
+                        <li class="list-group-item"><i class="fas fa-check"></i> Unlimited Downloads</li>
+                        <li class="list-group-item"><i class="fas fa-check"></i> Money-Back Guarantee</li>
+                    </ul>
+                    <div class="card-footer text-center">
+
+                        <button type="button" class="btn btn-primary"><a
+                                href="{% url 'subscribe' 'monthly' %}">Subscribe</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h1>Yearly</h1>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><span>&#8377;600/</span>YEAR</li>
+                        <li class="list-group-item"><i class="fas fa-check"></i> 24/7 Access to Courses</li>
+                        <li class="list-group-item"><i class="fas fa-check"></i> Live Q&A with Experts</li>
+                        <li class="list-group-item"><i class="fas fa-check"></i> Unlimited Downloads</li>
+                        <li class="list-group-item"><i class="fas fa-check"></i> Money-Back Guarantee</li>
+                    </ul>
+                    <div class="card-footer text-center">
+
+                        <button type="button" class="btn btn-primary"><a
+                                href="{% url 'subscribe' 'yearly' %}">Subscribe</a></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

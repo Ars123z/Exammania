@@ -1,0 +1,29 @@
+{% extends 'main/base.html' %}
+{% block body %}
+
+
+<h1>{{ subject }} Test</h1>
+
+<form method="post" action="{% url 'main:submit_test' %}?question_ids={{ question_ids|join:',' }}">
+    {% csrf_token %}
+    <ol>
+        <input type="hidden" name="subject" value="{{ subject }}">
+        {% for question in questions %}
+        <li style="font-style: italic;color:orange;font-size: 1em;">
+            {{ question.body }}
+            <ul class="mt-3 mb-2" style="list-style: none;">
+                {% for option in question.options.all %}
+                <li style="color:beige">
+                    <input type="radio" name="question_{{ question.id }}" value="{{ option.id }}">
+                    {{ option.content }}
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ol>
+    <input type="submit" value="Submit Test">
+</form>
+
+
+{% endblock %}

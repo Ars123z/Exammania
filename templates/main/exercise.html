@@ -1,0 +1,111 @@
+{% extends "main/base.html" %}
+{% block body %}
+<div id="mainblock" class="container body">
+
+    <p style="font-style: italic;color:orange;font-size: 1em;">Q{{no}}.&nbsp;{{body|safe}}</p>
+    <p style="font-size: o.8em;">{{level}}</p>
+</div>
+<div class="container options">
+    <div class="row">
+        {% for option in options %}
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <span style="display: inline-block; height: 2em;margin-bottom: 10px;">{{forloop.counter}}.&nbsp;</span>
+            {% if option in correct_options %}
+            <span
+                style="font-style: italic; font-size: 1em; display: inline-block; height: 2em; border: 1px solid red; margin-bottom:10px; padding-left: 5px; padding-right: 10px; border-radius: 10px; width: 220px;"
+                class="answer">{{ option.content }}</span>
+            {% else %}
+            <span
+                style="font-style: italic; font-size: 1em; display: inline-block; height: 2em; border: 1px solid red; margin-bottom:10px; padding-left: 5px; padding-right: 10px; border-radius: 10px; width: 220px;"
+                class="wrong">{{ option.content }}</span>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <button type="button" onclick="showSolution()" style="display:none; width:150px;" id="solutionButton">Show
+            Solution</button>
+    </div>
+</div>
+<div class="container ans" style="display:none">
+    <div class="row">
+        <p style="font-style: italic;color:white;font-size: 1em;"><span
+                style="color:orange;">Solution:</span>&nbsp;{{answer|safe}}</p>
+    </div>
+</div>
+
+<div class="container mt-3">
+    <div class="row">
+        <button type="button" onclick="showAnswer()" style="width:150px">Show Answer</button>
+    </div>
+</div>
+
+<div class="container mt-3">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-between">
+            <li class="page-item">
+                {% if no == 1 %}
+                <form method="get" action="{% url 'main:exercise_solution' Book Chapter Exercise no %}">
+                    <button type="submit" class="btn btn-primary disabled">Previous</button>
+                </form>
+                {% else %}
+                <form method="get" action="{% url 'main:exercise_solution' Book Chapter Exercise no|add:-2 %}">
+                    <button type="submit" class="btn btn-primary">Previous</button>
+                </form>
+                {% endif %}
+            </li>
+            {% if no == 90 %}
+            <li class="page-item">
+                <form method="get" action="{% url 'main:exercise_solution' Book Chapter Exercise no|add:-1 %}">
+                    <button type="submit" class="btn btn-primary disabled">Next</button>
+                </form>
+                {% else %}
+            <li class="page-item">
+                <form method="get" action="{% url 'main:exercise_solution' Book Chapter Exercise no %}">
+                    <button type="submit" class="btn btn-primary">Next</button>
+                </form>
+                {% endif %}
+            </li>
+        </ul>
+    </nav>
+</div>
+{% endblock %}
+
+
+{% block script %}
+<script>
+    function showAnswer() {
+        // Get all elements with the `.answer` class.
+        const answerElements = document.querySelectorAll('.answer');
+
+        // Change the background color of all `.answer` elements to green.
+        for (const answerElement of answerElements) {
+            answerElement.style.backgroundColor = 'green';
+        }
+
+        // Get all elements with the `.wrong` class.
+        const wrongElements = document.querySelectorAll('.wrong');
+
+        // Change the background color of all `.wrong` elements to red.
+        for (const wrongElement of wrongElements) {
+            wrongElement.style.backgroundColor = 'red';
+        }
+        const solutionButton = document.getElementById('solutionButton');
+        solutionButton.style.display = 'block'
+    }
+    function showSolution() {
+        // Get the solution div element
+        const solutionDiv = document.querySelector('.ans');
+
+        // Toggle the display style to show/hide the solution
+        if (solutionDiv.style.display === 'none' || solutionDiv.style.display === '') {
+            solutionDiv.style.display = 'block';
+        } else {
+            solutionDiv.style.display = 'none';
+        }
+    }
+
+</script>
+{% endblock %}

@@ -1,0 +1,156 @@
+{% extends "main/base.html" %}
+
+{% block body %}
+<div class="container">
+    <h1 class="text-center" style="color:orange;">Mathematics Notes</h1>
+    <section>
+        <h1 style="color:orange;">Algebra</h1>
+        <p1>0. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                href="{% url 'main:notes_details' 'Maths' 'Algebra' 'Sequence Series' %}">Sequence and Series</a>
+            </p>
+            <p>1. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                    onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                    href="{% url 'main:notes_details' 'Maths' 'Algebra' 'Complex Numbers' %}">Complex Numbers</a>
+            </p>
+            <p>2. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                    onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                    href="{% url 'main:notes_details' 'Maths' 'Algebra' 'Determinants' %}">Determinants</a>
+            </p>
+            <p>3. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                    onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                    href="{% url 'main:notes_details' 'Maths' 'Algebra' 'Matrices' %}">Matrices</a>
+            </p>
+            <p>4. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                    onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                    href="{% url 'main:notes_details' 'Maths' 'Algebra' 'Quadratic Expressions' %}">Quadratic Equations
+                    and Expressions</a>
+            </p>
+            <p>5. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                    onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                    href="{% url 'main:notes_details' 'Maths' 'Algebra' 'Permutation Combination' %}">Permutation and
+                    Combination</a>
+            </p>
+            <p>6. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                    onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                    href="{% url 'main:notes_details' 'Maths' 'Algebra' 'Mathematical Induction' %}">Principle of
+                    Mathematical Induction</a>
+            </p>
+            <p>7. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                    onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                    href="{% url 'main:notes_details' 'Maths' 'Algebra' 'Binomial Theorem' %}">Binomial Theorem</a>
+            </p>
+    </section>
+    <section>
+        <h2 style="color:orange">Trigonometry</h1>
+            <p>14. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                    onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                    href="{% url 'main:notes_details' 'Maths' 'Trigonometry' 'Angle Measure' %}">Angles and Their
+                    Measurements</a>
+            </p>
+            <p>15. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                    onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                    href="{% url 'main:notes_details' 'Maths' 'Trigonometry' 'Trigfunctions' %}">Trigometric
+                    Functions</a></p>
+            <p>16. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                    onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                    href="{% url 'main:notes_details' 'Maths' 'Trigonometry' 'Conditional Identities' %}">Conditional
+                    Trignometric Identities</a>
+            </p>
+            <p>17. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                    onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                    href="{% url 'main:notes_details' 'Maths' 'Trigonometry' 'Units and Dimensions' %}">Thermometery,
+                    Thermal
+                    Expansion and Kinetic Theory of Gases</a></p>
+            <p>18. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                    onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                    href="{% url 'main:notes_details' 'Maths' 'Trigonometry' 'Laws of Thermodynamics' %}">Laws of
+                    Thermodynamics</a></p>
+            <p>19. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                    onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                    href="{% url 'main:notes_details' 'Maths' 'Trigonometry' 'Units and Dimensions' %}">Calorimetry
+                    and
+                    Heat
+                    Transfer</a></p>
+    </section>
+
+    <section>
+        <h2 style="color:orange">Calculus</h2>
+        <p>20. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                href="{% url 'main:notes_details' 'Maths' 'Calculus' 'Current Electricity' %}">Current
+                Electricity</a>
+        </p>
+        <p>21. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                href="{% url 'main:notes_details' 'Maths' 'Calculus' 'Units and Dimensions' %}">Electrostatics</a></p>
+        <p>22. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                href="{% url 'main:notes_details' 'Maths' 'Calculus' 'Units and Dimensions' %}">Capacitors</a>
+        </p>
+        <p>23. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                href="{% url 'main:notes_details' 'Maths' 'Calculus' 'Units and Dimensions' %}">Magnetics</a>
+        </p>
+        <p>24. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                href="{% url 'main:notes_details' 'Maths' 'Calculus' 'Units and Dimensions' %}">Electromagnetic
+                Induction</a>
+        </p>
+        <p>25. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                href="{% url 'main:notes_details' 'Maths' 'Calculus' 'Units and Dimensions' %}">Alternating
+                Current</a>
+        </p>
+
+    </section>
+    <section>
+        <h2 style="color:orange">Coordinate Geometry</h2>
+        <p>26. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                href="{% url 'main:notes_details' 'Maths' 'CoordinateGeometry' 'Units and Dimensions' %}">Electromagnetic
+                Waves</a>
+        </p>
+        <p>27. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                href="{% url 'main:notes_details' 'Maths' 'CoordinateGeometry' 'Units and Dimensions' %}">Reflection of
+                Light</a>
+        </p>
+        <p>28. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                href="{% url 'main:notes_details' 'Maths' 'CoordinateGeometry' 'Units and Dimensions' %}">Refraction of
+                Light</a>
+        </p>
+        <p>29. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                href="{% url 'main:notes_details' 'Maths' 'CoordinateGeometry' 'Interference' %}">Interference and
+                Diffraction</a></p>
+        <p>30. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                href="{% url 'main:notes_details' 'Maths' 'CoordinateGeometry' 'Modern PhysicsII' %}">Modern Physics
+                I</a></p>
+        <p>31. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                href="{% url 'main:notes_details' 'Maths' 'CoordinateGeometry' 'Modern PhysicsI' %}">Modern Physics
+                II</a></p>
+        <p>32. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                href="{% url 'main:notes_details' 'Maths' 'CoordinateGeometry' 'Semiconductors' %}">Semiconductors</a>
+        </p>
+        <p>33. <a style="text-decoration: none; color:aliceblue; font-style: oblique;"
+                onmouseover="this.style.color='gray'" onmouseout="this.style.color='aliceblue'"
+                href="{% url 'main:notes_details' 'Maths' 'CoordinateGeometry' 'Communication Systems' %}">Communication
+                Systems</a>
+        </p>
+    </section>
+    <section>
+        <h2 style="color:orange">3D Coordinate Geometry</h2>
+    </section>
+    <section>
+        <h2 style="color:orange">Probability and Statistics</h2>
+    </section>
+    <section>
+        <h2 style="color:orange">Set Theory</h2>
+    </section>
+</div>
+{% endblock %}

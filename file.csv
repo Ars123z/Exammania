@@ -1,0 +1,20 @@
+If the nth term of a sequence in 2an + b where a abd b are constants is this sequence an A.P,the answer is yes,easy,yes,no,cann't be determined,none of these,yes
+What is the fifth term of the sequence whose first 3 terms are 3 3 6 and each term after the second is the sum of two preceding terms,the answer is 15,easy,13,15,17,19,15
+What is the 10th term of the sequence 10 5 0 -5 -10?,the answer is -35,easy,25,35,-35,-40,-35
+A person is appointed in the scale Rs 500 - 50 - 1000.Find how many years he will reach the maximum of the scale?,the answer is 10 years,easy,10,12,15,7,10
+What is the number of all 3 digit numbers divisible by 5?,the answer is 180,easy,200,220,180,160,180
+What is the 10th term of a sequence whose 7th and 12th terms are 34 and 64 respectively?,the answer is 52,easy,53,52,50,47,52
+A sum of money kept is a bank amounts to Rs 1240/- in 4 years and 1600 in 10 years.What is the original sum and the simple interest carried every year and the sum of money in 7 years?,the answer is,easy,amount=1000; interest=60;amount after 7 years=1420,amount=1060; interest=60;amount after 7 years=1420,amount=1000; interest=100;amount after 7 years=1420,amount=1000; interest=60;amount after 7 years=1400,amount=1000; interest=60;amount after 7 years=1420
+Is 105 a term of the arithmetic sequence $4 9 14 19\cdots$?,the answer is No,easy,yes,no,cann't be determined,none of these,yes
+What is the first negetive term of the sequence $999 995 991 987\cdots$,the answer is -1,easy,-1,-3,-2,-4,-1
+Each of the series $3 + 5 + 7 +\cdots$ and $4 + 7 + 10 +\cdots$ are continued to 100 terms.How many terms are common?,the answer is 33,medium,33,32,30,29,33
+If the pth term of an A.P is q and qth term is p.What is the first term common difference and (p + q)th term?,first term=p + q - 1 cd=-1 (p + q)th term=0,medium,first term=p + q - 1 cd=-1 (p + q)th term=0,first term=p + q + 1 cd=1 (p + q)th term=0,first term=p - q - 1 cd=-1 (p + q)th term=0,first term=p + q + 3 cd=2 (p + q)th term=0,first term=p + q - 1 cd=-1 (p + q)th term=0
+Which of these is true for an A.P?,the answer is $t_{m} + t_{2n + m}= 2t_{n + m}$,hard,$t_{m} + t_{2n + m}= 2t_{n + m}$,$t_{m} + t_{2m + n}= 2t_{n + m}$,$t_{m} + t_{2n + m}= t_{n + m}$,$t_{n} + t_{2n + m}= 2t_{n + m}$,$t_{m} + t_{2n + m}= 2t_{n + m}$
+15 is divided in 3 parts which are in A.P and the sum of there squares is 83.What are the numbers?,the answer is 3 5 7,easy,3 5 7,4 5 6,3 6 6,4 5 6,3 5 7
+Three numbers are in A.P.There sum is 27 and the sum of there squares is 275.What are the numbers?,the answer is 5 9 13,easy,5 9 13,4 9 14,4 10 13,5 10 12,5 9 13
+The sum of three numbers in A.P is 12 and the sum of their cubes is 408.What are they?,The answer is 1 4 7,medium,1 4 7,2 2 8,1 5 6,2 3 7,1 4 7
+Divide 20 into four parts which are in A.P such that the product of the 1st and 4th is to the product of the 2nd and 3rd is 2:3,the answer is 2 4 6 8,medium,2 4 6 8,2 5 6 8,3 5 7 8,3 5 6 8,2 4 6 8
+If $\frac{a}{b + c} \frac{b}{c + a} \frac{c}{a + b}$ is in A.P and $a + b + c \neq 0$.Which of these is true?,the answer is both 1 and 2,mediuum,$\frac{1}{b + c} \frac{1}{c + a} \frac{1}{a + b}$,$\frac{a + b + c}{b + c} \frac{b + c + a}{c + a} \frac{c + a + b}{a + b}$,both 1 and 2,none of these,both 1 and 2
+If a b c are in A.P.Which of these is/are true?,the answer is all of these,hard,$b + c c + a a + b$,$a^{2}(b + c) b^{2}(c + a) c^{2}(a + b)$,$\frac{ab + ac}{bc} \frac{bc + ba}{ca} \frac{ca + bc}{ab}$,all of these,all of these
+If $\frac{b + c - a}a} \frac{c + a - b}{b} \frac{a + b - c}{c}$ are in A.P and $a + b + c \neq 0$.Which of these is true?,the answer is both 1 and 2,hard,$\frac{1}{a} \frac{1}{b} \frac{1}{c}$,$\frac{a + b + c}{a} \frac{a + b + c}{b} \frac{a + b + c}{c}$,both of these,none of these,both of these
+If $(b - c)^{2} (c - a)^{2} (a - b)^{2}$ are in A.P then which of these options are true?,the answer is $\frac{1}{b - c} \frac{1}{c - a} \frac{1}{a - b}$,hard,$\frac{1}{b - c} \frac{1}{c - a} \frac{1}{a - b}$,$\frac{a + b + c}{b - c} \frac{a + b + c}{c - a} \frac{a + b + c}{a - b}$,both of these,none of these,both of these

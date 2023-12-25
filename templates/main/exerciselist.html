@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'main/css/exerciselist.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 id="heading">{{ Chapter.name }}</h1>
+    {% for exercise in Exercises %}
+    <p id="exercise_name">{{ forloop.counter }}.&nbsp;&nbsp;Exercise&nbsp;&nbsp;<a
+            href="{% url 'main:exercise_solution' Book.name Chapter.name exercise.name 0 %}">{{ exercise.name }}</a>
+
+    </p>
+    {% endfor %}
+</div>
+{% endblock %}
+</div>
+
+{% block script %}
+{# Add your JavaScript code here if needed #}
+{% endblock %}

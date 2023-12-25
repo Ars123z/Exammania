@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    color: white;
+   
+}
+
+.navbar {
+    background-color: orange;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.navbar-brand {
+    font-family: "Pacifico", cursive;
+    font-size: 30px;
+}
+
+.dropdown-menu {
+    background-color: orange;
+
+}
+
+.dropdown-menu a {
+    color: black;
+
+}
+
+#mainblock {
+    margin-top: 90px;
+}
+/* .answer {
+    background-color: green;
+}
+.wrong {
+    background-color: red;
+} */

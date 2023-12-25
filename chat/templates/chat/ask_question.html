@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+{% block body %}
+<form method="post" action="{% url 'ask_question' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit Question</button>
+</form>
+<script type="text/javascript">
+    // Use MathJax to render LaTeX in the 'latex-input' textarea
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, "latex-input"]);
+</script>
+{% endblock %}

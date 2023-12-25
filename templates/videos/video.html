@@ -1,0 +1,90 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extranav %}
+<li class="nav-item dropdown mobile-menu">
+  <a class="nav-link dropdown-toggle" href="#" id="subjectDropdown" role="button" data-bs-toggle="dropdown"
+    aria-haspopup="true" aria-expanded="false">
+    {{topic }} section
+  </a>
+  <div class="dropdown-menu" aria-labelledby="subjectDropdown">
+    {% for video in videos %}
+    <a class="dropdown-item" href="{% url 'videos_physics' topic video.order %}">{{ video.title }}</a>
+    {% endfor %}
+  </div>
+</li>
+{% endblock %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'videos/css/video.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <div class="row">
+    <!-- Video Content -->
+    <div class="col-md-8 mt-4">
+      <h2 class="heading">{{ topic }}</h2>
+
+      <div class="video-container">
+        <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with the actual video ID -->
+        <div class="iframe-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video1.video_id }}" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="video-details">
+        <h3>{{ video.title }}</h3>
+        <p>Description of the video goes here. You can provide additional details and information.</p>
+      </div>
+
+      <!-- Add navigation buttons, related content, or other elements as needed -->
+
+      <div class="container mt-3">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-between">
+            <li class="page-item">
+              {% if no == 1 %}
+              <form method="get" action="{% url 'videos_physics' topic no %}">
+                <button type="submit" class="btn btn-primary disabled">Previous</button>
+              </form>
+              {% else %}
+              <form method="get" action="{% url 'videos_physics' topic no|add:-2 %}">
+                <button type="submit" class="btn btn-primary">Previous</button>
+              </form>
+              {% endif %}
+            </li>
+            {% if no == 3 %}
+            <li class="page-item">
+              <form method="get" action="{% url 'videos_physics' topic no|add:-1 %}">
+                <button type="submit" class="btn btn-primary disabled">Next</button>
+              </form>
+            </li>
+            {% else %}
+            <li class="page-item">
+              <form method="get" action="{% url 'videos_physics' topic no %}">
+                <button type="submit" class="btn btn-primary">Next</button>
+              </form>
+            </li>
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Sidebar - All Videos Section -->
+    <div class="col-md-4 d-none d-md-block">
+      <div class="sidebar">
+        <h4 class="heading mt-4">All {{ topic }} Videos</h4>
+        <ul>
+          {% for video in videos %}
+          <li><a href="{% url 'videos_physics' topic video.order %}">{{ video.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+<!-- Add your scripts, footer content, or additional body content here -->

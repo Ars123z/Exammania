@@ -1,0 +1,60 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+<link rel="stylesheet" href="{% static 'videos/css/style.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h2>Videos</h2>
+
+  <!-- Physics Section -->
+  <section>
+    <h3>Physics</h3>
+    <!-- Add content related to Physics videos -->
+    {% include 'videos/Physics_section.html' %}
+  </section>
+
+  <!-- Chemistry Section -->
+  <section>
+    <h3>Chemistry</h3>
+    <!-- Add content related to Chemistry videos -->
+    {% include 'videos/chemistry_section.html' %}
+  </section>
+
+  <!-- Math Section -->
+  <section>
+    <h3>Math</h3>
+    <!-- Add content related to Math videos -->
+    {% include 'videos/maths_section.html' %}
+  </section>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $(".owl-carousel").owlCarousel({
+      loop: false,
+      margin: 10,
+      nav: true,
+      responsive: {
+        0: {
+          items: 2
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 5
+        }
+      }
+    });
+  });
+</script>
+{% endblock %}

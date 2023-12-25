@@ -1,0 +1,21 @@
+/* CSS animation for fireworks */
+@keyframes fireworks {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+/* Style for the fireworks element */
+.fireworks {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    animation: fireworks 1s ease-in-out;
+}

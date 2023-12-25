@@ -1,0 +1,61 @@
+
+        /* Optional custom CSS styles */
+        body {
+            color: white;
+            background: black;
+        }
+
+        .profile-image {
+            height: auto;
+            max-width: 100%;
+            /* Ensure the image scales with the viewport */
+        }
+
+        /* Add custom CSS to style the navbar */
+        .navbar {
+            background-color: orange;
+            /* Background color of the navbar */
+        }
+
+        .navbar a {
+            color: white;
+            /* Text color of the navbar links */
+        }
+
+        .custom-margin {
+            margin-top: 70px;
+        }
+
+        /* Define a custom class for orange color and italic text */
+        .orange-italic {
+            color: orange;
+            font-style: italic;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        .navbar-brand {
+            font-family: "Pacifico", cursive;
+            font-size: 30px;
+        }
+
+        .dropdown-menu {
+            background-color: orange;
+
+        }
+
+        .dropdown-menu a {
+            color: black;
+
+        }
+    
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f6d365;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
+    }

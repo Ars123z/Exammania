@@ -1,0 +1,55 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'main/css/animate.css' %}">
+{% endblock %}
+{% block body %}
+
+
+<h1>{{ subject }} Test Result</h1>
+
+{% if fireworks %}
+<div id="fireworks-container">
+    <div class="fireworks"></div>
+    <!-- Add more fireworks elements as needed -->
+</div>
+{% endif %}
+
+<div id="emoji" style="font-size: 100px;">{{ emoji }}</div>
+
+<h2>Your Score: {{ score }}%</h2>
+
+<audio id="fireworks-sound" src="{% static 'main/audio/fireworks2.mp3' %}" preload="auto"></audio>
+<p style="text-align: center; margin-top: 20px;"><a href="{% url 'main:generate_test' 'physics' %}"
+        style="text-decoration: none; color:black; font-size: 20px; border:1px solid black; border-radius: 10px; background-color: orange; padding: 5px;">Take
+        test again</a></p>
+<p style="text-align: center; margin-top: 20px;">
+    <a href="{% url 'main:review_test' %}?question_ids={{ question_ids|join:',' }}"
+        style="text-decoration: none; color:black; font-size: 20px; border:1px solid black; border-radius: 10px; background-color: orange; padding: 5px;">
+        Review Test
+    </a>
+</p>
+{% endblock %}
+{% block script %}
+<script>
+
+    // JavaScript to trigger fireworks animation and sound
+    {% if fireworks %}
+    window.addEventListener('load', function () {
+        const firework = document.querySelectorAll('.fireworks');
+        firework.forEach(function (firework, index) {
+            setTimeout(function () {
+                firework.style.top = Math.random() * 100 + 'vh';
+                firework.style.left = Math.random() * 100 + 'vw';
+                playFireworksSound();
+            }, index * 100);
+        });
+    });
+
+    function playFireworksSound() {
+        const audio = document.getElementById('fireworks-sound');
+        audio.play();
+    }
+    {% endif %}
+</script>
+{% endblock %}

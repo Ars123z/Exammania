@@ -1,0 +1,11 @@
+#start-button {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    background-color: orange;
+    border-radius: 5px;
+}
+
+.container {
+    margin-top: 70px;
+}

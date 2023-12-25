@@ -1,0 +1,9 @@
+{% extends 'main/base.html' %}
+{% block body %}
+<form method="post" action="{% url 'answer_question' question.id %}">
+    {% csrf_token %}
+    <label for="answer_text">Answer:</label>
+    <textarea name="answer_text" rows="4" cols="50"></textarea>
+    <button type="submit">Submit Answer</button>
+</form>
+{% endblock %}

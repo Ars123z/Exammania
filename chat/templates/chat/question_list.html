@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'chat/css/style.css' %}">
+{% endblock %}
+{% block body %}
+<div class="container">
+    <h2>Questions</h2>
+    {% if user.is_staff %}
+    <p><a href="{% url 'staff_unanswered_questions' %}">Unanswered Questions for Staff</a></p>
+    {% endif %}
+    {% if questions %}
+    {% for question in questions %}
+    <div class="question-container {% if question.is_answered %}answered{% else %}unanswered{% endif %}">
+        <p class="question"><strong>Question:</strong> {{ question.question_text }}</p>
+        {% if question.is_answered %}
+        <p class="answer"><strong>Answer:</strong> {{ question.answer_text }}</p>
+        {% endif %}
+        
+        {% if user.is_staff %}
+            <div class="staff-actions">
+                <a href="{% url 'edit_question' question.id %}" class="edit-link">Edit Question</a>
+                <a href="{% url 'edit_answer' question.id %}" class="edit-link">Edit Answer</a>
+                <a href="{% url 'delete_question' question.id %}" class="delete-link">Delete</a>
+            </div>
+        {% endif %}
+        
+        <div class="common-actions">
+            <a href="{% url 'edit_question' question.id %}" class="edit-link">Edit Question</a>
+            <a href="{% url 'delete_question' question.id %}" class="delete-link">Delete</a>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p class="no-questions">No questions available.</p>
+    {% endif %}
+    <p><a href="{% url 'ask_question' %}">Ask a Question</a></p>
+</div>
+{% endblock %}

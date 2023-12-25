@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% block body %}
+<h1>{{ subject }} Test Review</h1>
+
+<ul>
+    {% for question in questions %}
+    <li>
+        <strong>Question:</strong> {{ question.body }}<br>
+
+        <strong>Correct Answer:</strong> {{ question.answer }}
+    </li>
+    {% endfor %}
+</ul>
+
+<p>
+    <a href="{% url 'main:generate_test' 'physics' %}" class="btn btn-primary">Take Another Test</a>
+</p>
+{% endblock %}

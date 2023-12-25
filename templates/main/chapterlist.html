@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extrahead %}
+
+
+<link rel="stylesheet" href="{% static 'main/css/chapterlist.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h1 id="heading">{{ book.name }}</h1>
+  {% for chapter in Chapters %}
+  <h4 id="chapter_name">{{ forloop.counter }}.&nbsp;&nbsp;<a
+      href="{% url 'main:exercise_list' book.name chapter.name %}">
+      {{ chapter.name }}</a></h4>
+  {% endfor %}
+  {% endblock %}
+
+
+</div>
+
+{% block script%}
+{% endblock %}

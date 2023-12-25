@@ -1,0 +1,191 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+{% endblock %}
+
+{%block body%}
+<div class="container">
+
+    <p>Take your jee preparations on a rocket with our extensive collection of exam solutions and various book
+        solutions.
+    </p>
+    <p>You will also find our exclusively curated videos on every topics jee examinations</p>
+    <a id="start-button" href="{% url 'main:generate_test' 'physics' %}">Take a test</a>
+    <h1 class="mt-5">Some books in our collection</h1>
+</div>
+<div class="container">
+    <div id="myCarousel-1" class="owl-carousel owl-theme my-3">
+        <div style="background-color: black" class="card shadow my-3">
+            <img src="https://images.pexels.com/photos/68525/soap-colorful-color-fruit-68525.jpeg" class="card-img-top"
+                height="300" alt="Image 1" />
+            <div class="card-body">
+                <h5 class="card-title">Card 1</h5>
+                <p class="card-text danger">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+        <div style="height:350px;" class="card shadow my-3">
+            <!-- <img src="https://images.pexels.com/photos/8754695/pexels-photo-8754695.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                class="card-img-top" alt="Image 2" height="300" /> -->
+            <div class="card-body"
+                style="background-image: url('/static/main/images/image.jpg'); background-color:black;">
+                <h5 class="card-title">Card 2</h5>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+        <div class="card shadow my-3">
+            <img src="https://images.pexels.com/photos/8754695/pexels-photo-8754695.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                class="card-img-top" alt="Image 2" height="300" />
+            <div class="card-body">
+                <h5 class="card-title">Card 2</h5>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+        <div class="card shadow my-3">
+            <img src="https://images.pexels.com/photos/8754695/pexels-photo-8754695.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                class="card-img-top" alt="Image 2" height="300" />
+            <div class="card-body">
+                <h5 class="card-title">Card 2</h5>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+        <div class="card shadow my-3">
+            <img src="https://images.pexels.com/photos/8754695/pexels-photo-8754695.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                class="card-img-top" alt="Image 2" height="300" />
+            <div class="card-body">
+                <h5 class="card-title">Card 2</h5>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+        <!-- Add more cards as needed -->
+    </div>
+</div>
+
+
+<div class="container">
+    <h1 class="mt-5">Some Video Series in our collection</h1>
+    <div id="myCarousel-2" class="owl-carousel owl-theme my-3">
+        <div style="background-color: black" class="card shadow my-3">
+            <img src="https://images.pexels.com/photos/68525/soap-colorful-color-fruit-68525.jpeg" class="card-img-top"
+                height="300" alt="Image 1" />
+            <div class="card-body">
+                <h5 class="card-title">Card 1</h5>
+                <p class="card-text danger">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+        <div style="height:350px;" class="card shadow my-3">
+            <!-- <img src="https://images.pexels.com/photos/8754695/pexels-photo-8754695.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                class="card-img-top" alt="Image 2" height="300" /> -->
+            <div class="card-body"
+                style="background-image: url('/static/main/images/image.jpg'); background-color:black;">
+                <h5 class="card-title">Card 2</h5>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+        <div class="card shadow my-3">
+            <img src="https://images.pexels.com/photos/8754695/pexels-photo-8754695.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                class="card-img-top" alt="Image 2" height="300" />
+            <div class="card-body">
+                <h5 class="card-title">Card 2</h5>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+        <div class="card shadow my-3">
+            <img src="https://images.pexels.com/photos/8754695/pexels-photo-8754695.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                class="card-img-top" alt="Image 2" height="300" />
+            <div class="card-body">
+                <h5 class="card-title">Card 2</h5>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+        <div class="card shadow my-3">
+            <img src="https://images.pexels.com/photos/8754695/pexels-photo-8754695.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                class="card-img-top" alt="Image 2" height="300" />
+            <div class="card-body">
+                <h5 class="card-title">Card 2</h5>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+        <!-- Add more cards as needed -->
+    </div>
+</div>
+
+{% endblock %}
+{% block script %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#myCarousel-1').owlCarousel({
+            items: 3, // Number of cards shown in each slide
+            loop: true, // Continuously loop the carousel
+            margin: 20, // Space between cards
+            nav: true, // Show navigation buttons
+            navText: [
+                "<i class='fas fa-chevron-left'></i>",
+                "<i class='fas fa-chevron-right'></i>",
+            ], // Custom navigation icons
+            responsive: {
+                0: {
+                    items: 1, // Number of cards shown in the carousel for smaller screens
+                },
+                768: {
+                    items: 2, // Number of cards shown in the carousel for medium screens
+                },
+                992: {
+                    items: 3, // Number of cards shown in the carousel for large screens
+                },
+            },
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('#myCarousel-2').owlCarousel({
+            items: 3, // Number of cards shown in each slide
+            loop: true, // Continuously loop the carousel
+            margin: 20, // Space between cards
+            nav: true, // Show navigation buttons
+            navText: [
+                "<i class='fas fa-chevron-left'></i>",
+                "<i class='fas fa-chevron-right'></i>",
+            ], // Custom navigation icons
+            responsive: {
+                0: {
+                    items: 1, // Number of cards shown in the carousel for smaller screens
+                },
+                768: {
+                    items: 2, // Number of cards shown in the carousel for medium screens
+                },
+                992: {
+                    items: 3, // Number of cards shown in the carousel for large screens
+                },
+            },
+        });
+    });
+</script>
+{% endblock %}

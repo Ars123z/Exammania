@@ -1,0 +1,288 @@
+{% extends "main/base.html" %}
+{% block extrahead %}
+<style>
+    body {
+        font-style: oblique;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 class="text-center" style="color:orange;">Sequences and Series Notes</h1>
+    <section class="mt-3">
+        <h3 style="color:orange;">1. Sequence</h3>
+        <p>Sequence is an ordered list of numbers</p>
+        <p>For example:</p>
+        <p>$0, 3, 8, 15, 24\cdots$</p>
+        <p>$1, 4, 7, 10, 13\cdots$</p>
+        <p>$1, 8, 27, 64, 125\cdots$</p>
+    </section>
+
+    <section class="mt-2">
+        <h3 style="color:orange;">2. Type of Sequence</h3>
+        <p>There are two type of sequences based on number of terms it contain.</p>
+        <p><strong><span style="color:orange;">Finite Sequence</span>:</strong> They are sequence containing finite
+            number of terms.</p>
+        <p><strong><span style="color:orange;">Infinite Sequence</span>:</strong> They are sequences containing infinite
+            sequence of
+            terms.</p>
+    </section>
+    <section class="mt-2">
+        <h3 style="color:orange;">3.Series</h3>
+        <p>If we sum up the terms of a sequence, it is called a series.</p>
+        <p>For example:</p>
+        <p>$0 + 3 + 8 + 15 + 24\cdots$</p>
+        <p>$1 + 4 + 7 + 10 + 13\cdots$</p>
+        <p>$1 + 8 + 27 + 64 + 125\cdots$</p>
+    </section>
+
+    <section class="mt-2">
+        <h3 style="color:orange;">Type of Series</h3>
+        <p>There are two type of series based on number of terms it contain.</p>
+        <p><strong><span style="color:orange;">Finite Sequence</span>:</strong> They are series containing finite number
+            of terms.</p>
+        <p><strong><span style="color:orange;">Infinite Sequence</span>:</strong> They are series containing infinite
+            sequence of
+            terms.</p>
+    </section>
+    <section>
+        <h3 style="color:orange;">Progression</h3>
+        <p>Sequence is an ordered list of numbers following a sepefic pattern or formula.</p>
+        <p>For example:</p>
+        <p>$0, 3, 8, 15, 24\cdots$&nbsp;&nbsp;&nbsp;{$n^{2} - 1$}</p>
+        <p>$1, 4, 7, 10, 13\cdots$&nbsp;&nbsp;&nbsp;{$3n - 2$}</p>
+        <p>$1, 8, 27, 64, 125\cdots$&nbsp;&nbsp;&nbsp;{$n^{3}$}</p>
+        We will study, in this course, three very important progressions.
+        <p><strong><span style="color:orange;">Aritmetic Progression</span>:</strong> It is a progression in which
+            difference of
+            preceding and succeding term is a constant.
+        </p>
+        <p><strong><span style="color:orange;">Geometric Progression</span>:</strong> It is a progrssion in which the
+            ratio of preceding
+            and succeding term is a contant</p>
+        <p><strong><span style="color:orange;">Harmonic Progression</span>:</strong> They are series containing infinite
+            sequence of
+            terms.</p>
+
+    </section>
+    <h3 style="color:orange;">Nth term of A.P</h3>
+    <p>As we already know difference of two consecutive terms is a contant in A.P. We can write the terms of an A.P like
+        this, where d is a constant.</p>
+    <p>T<sub>1</sub> = a</p>
+
+    <p>T<sub>2</sub> = a + d</p>
+
+    <p>T<sub>3</sub> = a + d + d = a + 2d</p>
+
+    <p>T<sub>4</sub> = a + 2d + d = a + 3d</p>
+
+    <p>T<sub>5</sub> = a + 3d + d = a + 4d</p>
+
+    <p>T<sub>6</sub> = a + 4d + d = a + 5d</p>
+    <p>Thus, the <strong>formula of n<sup>th</sup> term of A.P</strong> is,</p>
+
+    <p>T<sub>n</sub> = a + (n - 1)d</p>
+    <section>
+        <h3 style="color:orange;">Sum of n terms of A.P</h3>
+        <p>Let the sum to n terms of A.P be given by <strong>$S_{n}$</strong></p>
+        <p><span style="color:orange;"><strong>$S_{n}= $</strong></span> $a + (a + d) + (a + 2d) + \cdots + (a + (n -
+            2)d)
+            +
+            (a + (n - 1)d)$</p>
+        <p>Writing the sum in reverse order we have;</p>
+        <p><span style="color:orange;"><strong>$S_{n}= $</strong></span> $(a + (n - 1)d) + \cdots + (a + (n -
+            2)d)
+            + (a + d) + (a + 2d) + a
+            $</p>
+        <p>Adding i and ii we have;</p>
+        <p style="font-size: 1.5rem;"><span style="color:orange; "><strong>$S_{n}= $</strong></span>
+            $\frac{n[a + (n - 1)d]}{2}$</p>
+
+    </section>
+    <section>
+        <h3 style=" color:orange;"><strong>Properties of A.P</strong></h3>
+        <p>Here are some properties of A.P</p>
+        <p>If the same quantity be added to or subtracted from all the terms of an AP, the resulting progression is an
+            arithmetic progression</p>
+        <p>If the corresponding terms of two arithmetic progression be added or subtracted, the resulting progression is
+            also an arithmetic progression</p>
+        <p>If all the terms of an arithmetic progression multiplied divide by the same quantity, the resulting
+            progression is an arithmetic progression</p>
+    </section>
+    <section>
+        <h3 style="color:orange;">Nth term of G.P</h3>
+
+    </section>
+
+    <h3 style="color:orange;">Sum of n terms of G.P</h3>
+    <section>
+        <h3 style="color:orange;">Properties of G.P</h3>
+        <ol>
+            <li>If each term of a GP are multiplied by non zero number, then the sequence obtained is also a GP</li>
+            <li>The reciprocal of the term of a GP is also a GP</li>
+        </ol>
+    </section>
+    <section>
+        <h3 style="color:orange;">Arithmetico Geometric Series</h3>
+        <p><span style="color:orange; font-weight: bold;">definition: </span>If the terms of an AP are multiplied by the
+            corresponding terms of AGP, then the new series obtained is called arithmetico Geometric series.</p>
+        <p>2x +5x^{2} + 8x^{3} + 11x^{4}</p>
+
+    </section>
+
+    <h3 style="color:orange;">Sum of n terms of Arithmetico Geometric Series</h3>
+    <h3 style="color:orange;">Nth term of H.P</h3>
+    <h3 style="color:orange;">Sum of n terms of H.P</h3>
+    <h3>Properties of H.P</h3>
+    <section>
+        <h3 style="color:orange;">Sigma Notation and its Properties</h3>
+        <p>The symbol $\Sigma$ stands for summation</p>
+        <p style="color:orange; font-weight: bold;">properties:</p>
+        <ol>
+            <li>Constants can be taken out from $\Sigma$</li>
+            <li>$\displaystyle\sum\limits_{i=1}^{k}2= 2\displaystyle\sum\limits_{i=1}^{k}= 2k$</li>
+            <li>$\Sigma$ can be distributed over addition or subtraction</li>
+        </ol>
+    </section>
+    <section>
+        <h3 style="color:orange;">Sum of first n Natural Numbers</h3>
+        <p><strong style="color:orange">S= </strong>$1 + 2 + 3 + 4 +\cdots + n$</p>
+        <p><strong style="color:orange">S= </strong>$\displaystyle\sum\limits_{i=1}^{k}i= \frac{n[2 + (n-1)]}{2}=
+            \frac{n(n+1)}{2}$</p>
+    </section>
+    <section>
+        <h3 style="color:orange;">Sum of Squares of first n Natural Numbers</h3>
+        <p>Let the sum be denoted by <strong>S</strong></p>
+        <p>Consider the identity:</p>
+        <p>$r^{3} - (r-1)^{3}= 3r^{2} - 3r + 1$</p>
+        <p>Putting $r= 1, 2, 3,\cdots + n$, we get:</p>
+        <p>$1^{3} - 0^{3}= 3*1^{2} - 3*1 + 1$</p>
+        <p>$2^{3} - 1^{3}= 3*2^{2} - 3*2 + 1$</p>
+        <p>$3^{3} - 2^{3}= 3*3^{2} - 3*3 + 1$</p>
+        <p>$\cdots$</p>
+        <p>$\cdots$</p>
+        <p>$(n-1)^{3} - (n-2)^{3}= 3*(n-1)^{2} - 3*(n-1) + 1$</p>
+        <p>$n^{3} - (n-1)^{3}= 3*n^{2} - 3*n + 1$</p>
+        <p><strong>Adding all of these up, we get:</strong></p>
+        <p>$n^{3}= 3(1^{2} + 2^{2} + 3^{2} + \cdots + (n-1)^{2} + n^{2}) -3(1 + 2 + 3 + \cdots + (n-1) + n) + (1 + 1 + 1
+            + \cdots n times)$</p>
+        <p>3<strong>S</strong>= $n^{3} + 3\frac{n(n+1)}{2} - n$</p>
+        <p>3<strong>S</strong>= $n(n + 1)(n - 1) + 3\frac{n(n+1)}{2}$</p>
+        <p>3<strong>S</strong>= $n(n + 1)[(n - 1) + \frac{3}{2}]$</p>
+        <p>3<strong>S</strong>= $\frac{n(n + 1)(2n + 1)}{2}$</p>
+    </section>
+
+    <h3 style="color:orange;">Sum of Cubes of first n Natural Numbers</h3>
+    <section>
+        <h3 style="color:orange;">Sum to n terms of Arithmetico Geometric series</h3>
+    </section>
+
+    <h3 style="color:orange;">nth term of Harmonic series</h3>
+    <section>
+        <h3 style="color:orange;">Properties of Harmonic series</h3>
+        <ol>
+            <li>If the terms of a harmonic series are multiplied or divided by a constant then the resulting series is
+                also in
+                harmonic progression</li>
+        </ol>
+    </section>
+
+    <h3 style="color:orange;">Sum to n terms of Harmonic series</h3>
+    <section>
+        <h3 style="color:orange;">Means</h3>
+        <h4 style="color:orange;">Arithmetic Mean</h4>
+        <p><strong style="color:orange;">Single Mean: </strong>A number a is said to be the single AM between given
+            numbers a and b. If a, A,
+            B are in AP</p>
+        <p><strong style="color:orange;">Example: </strong>1, 3, 5 are in A.P, therefore 3 is the sigle A.M between 1
+            and 5</p>
+        <p><strong style="color:orange;">Arithmetic Means: </strong>Numbers $a, A_{1}, A_{2}, A_{3},....A_{n}, b$ are
+            said to be the n AM's
+            between two numbers a and b If $a, A_{1}, A_{2},...A_{n}, b$ are in A.P</p>
+        <p><strong style="color:orange;">Example: </strong>1, 3, 5, 7, 9, 11, 13, 15 are in A.P, therefore 3, 5, 7, 9,
+            11, 13 are 6 A.Ms
+            between 1 and 15</p>
+        <p><strong style="color:orange;">formula for single AM between two numbers</strong></p>
+        <p>Let a and B be the given quantities and A be the AM between them</p>
+        <p>Then a, A, b will be in AM.</p>
+        <p>$\therefore$ A - b = A - a</p>
+        <p>A= <span style="font-size: 1.5rem;">$\frac{a + b}{2}$</span></p>
+        <p>Hence A.M of a and b = <span style="font-size: 1.5rem;">$\frac{a + b}{2}$</span></p>
+        <p><strong style=" color:orange;">formula for n AMs between two numbers</strong></p>
+        <p>Let $A_{1}, A_{2},...A_{n}$ be the n AMs between given quantities a and b.</p>
+        <p>Then $a, A_{1}, A_{2},...A_{n}, b$ are in A.P</p>
+        <p>Now b = (n + 2)th term of the A.P</p>
+        <p>= a + (n + 2 - 1)d = a + (n + 1)d</p>
+        <p>$\therefore$ d= <span style="font-size: 1.5rem;">$\frac{b - a}{n + 1}$</span></p>
+        <p>the 1st A.M $A_{1}$= a + d= a + <span style="font-size: 1.5rem;">$\frac{b - a}{n + 1}$</span></p>
+        <p>the 2nd A.M $A_{2}$= a + 2d= a + 2<span style="font-size: 1.5rem;">$\frac{b - a}{n + 1}$</span></p>
+        <p>the nth A.M $A_{n}$= a + nd= a + n<span style="font-size: 1.5rem;">$\frac{b - a}{n + 1}$</span>=<span
+                style="font-size: 1.5rem;">$\frac{a + nb}{n + 1}$</span></p>
+        <p style="color:orange; font-weight: bold;">Sum of n AMs between a and b</p>
+        <p>S= $A_{1} + A_{2} + A_{3} + \cdots + A_{n}= \frac{n(a + d + b - d)}{2}= \frac{n(a + b)}{2}$</p>
+
+        <h4 style="color:orange;">Geometric Mean</h4>
+        <p><strong style="color:orange;">Single Mean: </strong>A number a is said to be the single GM between given
+            numbers a and b. If a, A,
+            B are in GP</p>
+        <p><strong style="color:orange;">Example: </strong>2, 4, 8 are in G.P, therefore 4 is the sigle A.M between 2
+            and 8</p>
+        <p><strong style="color:orange;">Geometric Means: </strong>Numbers $a, G_{1}, G_{2}, G_{3},....G_{n}, b$ are
+            said to be the n GM's
+            between two numbers a and b If $a, G_{1}, G_{2},...G_{n}, b$ are in G.P</p>
+        <p><strong style="color:orange;">Example: </strong>2, 4, 8, 16, 32 are in A.P, therefore 4, 8, 16 are 3 G.Ms
+            between 2 and 32</p>
+        <p><strong style="color:orange;">formula for single GM between two numbers</strong></p>
+        <p>Let a and b be the given quantities and G be the GM between them</p>
+        <p>Then a, G, b will be in GM.</p>
+        <p>$\therefore \frac{G}{a} =\frac{b}{G}$</p>
+        <p>$G^{2}$= ab</p>
+        <p>$G= \sqrt{ab}$</p>
+        <p>Hence G.M of a and b = $\sqrt{ab}$</p>
+        <p><strong style=" color:orange;">formula for n GMs between two numbers</strong></p>
+        <p>Let $G_{1}, G_{2},...G_{n}$ be the n AMs between given quantities a and b.</p>
+        <p>Then $a, G_{1}, G_{2},...G_{n}, b$ are in G.P</p>
+        <p>Now b = (n + 2)th term of the G.P</p>
+        <p>= a*r^{(n + 2) -1} = a*r^{n + 1}</p>
+        <p>$\therefore$ r= <span style="font-size: 1.5rem;">$\frac{b}{a}^{n + 1}$</span></p>
+        <p>the 1st A.M $A_{1}$= a*r= a* <span style="font-size: 1.5rem;">$\frac{b}{a}^\frac{1}{n + 1}$</span></p>
+        <p>the 2nd A.M $A_{2}= a*r^{2}= a*$ <span style="font-size: 1.5rem;">$\frac{b}{a}^\frac{2}{n + 1}$</span></p>
+        <p>the nth A.M $A_{n}= a*r^{n} = a*$ <span style="font-size: 1.5rem;">$\frac{b}{a}^\frac{n}{n + 1}$</span></p>
+        <p style="color:orange; font-weight: bold;">Product of n GMs between a and b</p>
+        <p>$G_{1}\cdot G_{2}\cdot G_{3}\cdots G_{n}$= $ar\cdot ar^{2}\cdot ar^{3}\cdots ar^{n}$</p>
+        <p>$= a^{n}r^{\frac{n(n + 1)}{2}}= a^{n}[(\frac{b}{a})^{\frac{1}{n + 1}}]^{\frac{n(n+1)}{2}}= (\sqrt{ab})^{n}$
+        </p>
+        <h4 style="color:orange;">Harmonic Mean</h4>
+        <p><strong style="color:orange;">Sigle Mean: </strong>A number a is said to be the single harmonic mean between
+            two numbers a and b, If a, A and b are in H.P</p>
+        <p><strong style="color:orange;">Example: </strong>1, $\frac{1}{2}, \frac{1}{3}$ are in H.P, therefore
+            $\frac{1}{2}$ is the single H.M between $1, \frac{1}{3}$</p>
+
+        <p><strong style="color:orange;">Geometric Means: </strong>Numbers $a, H_{1}, H_{2}, H_{3},....H_{n}, b$ are
+            said to be the n HM's
+            between two numbers a and b, If $a, H_{1}, H_{2},...H_{n}, b$ are in H.P</p>
+        <p><strong style="color:orange;">Example: </strong>$1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \frac{1}{5}$ are
+            in A.P, therefore $\frac{1}{2}, \frac{1}{3}, \frac{1}{4}$ are 3 G.Ms
+            between 1 and $\frac{1}{5}$</p>
+    </section>
+    <section>
+        <h3 style="color:orange;">Relation Between A.M, G.M and H.M Between two Numbers</h3>
+        <p>Let a and b be two real positive and unequal quantities and A, G, and H be the single amgmn hm, respectively,
+            between them</p>
+        <p>we know that,</p>
+        <p>A= $\frac{a + b}{2}$, G= $\sqrt{ab}$, H= $\frac{2ab}{a +b}$</p>
+        <p>Observe that,</p>
+        <p>AH= G<sup>2</sup></p>
+        <p>Therefore, A, G and H between two numbers form a G.P among themselves.</p>
+        <p>Also, observe</p>
+        <p>A - G= $\frac{a + b}{2} - \sqrt{ab}= \frac{(\sqrt{a} - \sqrt{b})^{2}}{2}$</p>
+        <p>which means A - G> 0 or A > G or $\frac{A}{G}> 1\cdots (1)$</p>
+        <p>We also know that, $\frac{A}{G}= \frac{G}{H}\cdots (2)$</p>
+        <p>from 1 and 2 we observer that A > G > H</p>
+
+    </section>
+
+    <h3 style="color:orange;">Means of n Natural Numbers</h3>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+<!-- staff_unanswered_questions.html -->
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'chat/css/style.css' %}">
+{% endblock %}
+{% block body %}
+<div class="container">
+    <h2>Unanswered Questions for Staff</h2>
+    {% if unanswered_questions %}
+    {% for question in unanswered_questions %}
+    <div class="question-container unanswered">
+        <p class="question"><strong>Question:</strong> {{ question.question_text }}</p>
+        <a href="{% url 'answer_question' question.id %}" class="answer-link">Answer this question</a>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p class="no-questions">No unanswered questions for staff.</p>
+    {% endif %}
+    <p><a href="{% url 'question_list' %}">Back to All Questions</a></p>
+</div>
+{% endblock %}

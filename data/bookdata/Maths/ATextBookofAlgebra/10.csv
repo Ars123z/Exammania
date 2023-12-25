@@ -1,0 +1,7 @@
+If the pth term of an H.P is q and qth term is p then pq th term is,the answer is 1,medium,0,1,p + q,$\frac{p\cdot q}{p + q}$,1
+If the pth term of an H.P is q and qth term is p then (p + q) th term is,the answer is $\frac{p\cdot q}{p + q}$,medium,$\frac{p\cdot q}{p + q}$,$\frac{p + q}{p\cdot q}$,0,p + q,$\frac{p\cdot q}{p + q}$
+If a b c are in H.P then b is equal to,the answer is $\frac{2ac}{a + c}$,easy,$\frac{1}{a} + \frac{1}{c}$,$\frac{ac}{a + c}$,$\frac{a + c}{ac}$,$\frac{2ac}{a + c}$,$\frac{2ac}{a + c}$
+The 3rd and 7th term of an HP are $\frac{1}{7}$ and $\frac{1}{15}$ the 15th term is,the answer is $\frac{1}{31}$,easy,$\frac{1}{29}$,$\frac{1}{30}$,$\frac{1}{31}$,$\frac{1}{33}$,$\frac{1}{31}$
+If $a_{1}\; a_{2}\; a_{3}\; a_{4}\; a_{5}$ are in H.P then $a_{1}\cdot a_{2} + a_{2}\cdot a_{3} + a_{3}\cdot a_{4} + a_{4}\cdot a_{5}$ is equal to,the answer is $4a_{1}\cdot a_{5}$,medium,$a_{1}\cdot a_{5}$,$2a_{1}\cdot a_{5}$,$3a_{1}\cdot a_{5}$,$4a_{1}\cdot a_{5}$,$4a_{1}\cdot a_{5}$
+If the pth term of H.P is $q\cdot r$ and qth term be $r\cdot p$ then rth tram is,the answer is $p\cdot q$,medium,$p\cdot q$,0,1,-(p + q),$p\cdot q$
+If y + z z + x and x + y are in H.P then $\frac{x}{y + z}$ $\frac{y}{z + x}$ and \frac{z}{x + y} are in,the answer is A.P,medium,A.P,G.P,H.P,none of these,A.P

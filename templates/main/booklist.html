@@ -1,0 +1,61 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'main/css/booklist.css' %}">
+{% endblock %}
+{% block body %}
+<h1 class="mt-3" style="text-align: center; font-style: oblique;">Book Solution</h1>
+<div class="container-sm booklist ">
+    <h2 style="color:orange; text-align: center;">Maths Section</h2>
+
+    <div class="row d-flex align-items-center flex-wrap">
+        {% for book in Maths_Book %}
+        <div class="col-md-4 col-sm-6 col-6">
+            <div class="card bg-transparent">
+                <img src="{{ book.image.url }}" class="card-img-top" alt="{{ book.name }}"
+                    style="height: 250px; width: 150px;">
+                <div class="card-body">
+                    <h5 class="card-title small"><a href="{% url 'main:chapter_list' book.name %}">{{ book.name }}</a>
+                    </h5>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <h2 style="color:orange; text-align: center;">Chemistry Section</h2>
+    <div class="row d-flex align-items-center flex-wrap">
+        {% for book in Chem_Book %}
+        <div class="col-md-4 col-sm-6 col-6">
+            <div class="card bg-transparent">
+                <img src="{{ book.image.url }}" class="card-img-top" alt="{{ book.name }}"
+                    style="height: 250px; width: 150px;">
+                <div class="card-body">
+                    <h5 class="card-title small"><a href="{% url 'main:chapter_list' book.name %}">{{ book.name }}</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <h2 style="color:orange; text-align: center;">Physics Section</h2>
+    <div class="row d-flex align-items-center flex-wrap">
+        {% for book in Physics_Book %}
+        <div class="col-md-4 col-sm-6 col-6">
+            <div class="card bg-transparent">
+                <img src="{{ book.image.url }}" class="card-img-top" alt="{{ book.name }}"
+                    style="height: 250px; width: 150px;">
+                <div class="card-body">
+                    <h5 class="card-title small"><a href="{% url 'main:chapter_list' book.name %}">{{ book.name }}</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}
