@@ -85,7 +85,7 @@ class Chapter(models.Model):
 
 class Exercise(models.Model):
     name= models.CharField(max_length=250)
-    questions= models.ManyToManyField(BookQuestion, related_name="Exercises")
+    questions= models.ManyToManyField(BookQuestion, related_name="Exercises", blank=True)
     chapter= models.ForeignKey(Chapter, related_name="exercises", on_delete=models.CASCADE)
 
     def __str__(self):
