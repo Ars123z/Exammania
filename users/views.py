@@ -75,7 +75,7 @@ def subscribe(request, subscription_type):
     
     try:
         client = razorpay.Client(auth=("rzp_test_D1XgJg5irfvjg1", "9VRwJqkvPzeqiD21h2Q6qwKb"))
-        payment = client.order.create({'amount': calculate_subscription_amount(subscription_type), "currency": "INR", "payment_capture": "1"})
+        payment = client.order.create({'amount': calculate_subscription_amount(subscription_type), "currency": "INR", "payment_capture": "1", "method":"upi"})
 
         # Fetch existing or create a new SubscriptionInfo instance
         subscription_info = SubcriptionInfo.objects.create(
