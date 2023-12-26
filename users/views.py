@@ -109,39 +109,11 @@ def join(request):
     return render(request, "users/join.html")
 
 
-@csrf_exempt
-def redirect1(request):
-    if request.method =="POST":
-        data= request.POST
-        order_id= data["razorpay_order_id"]
-        payment_id= data["razorpay_payment_id"]
 
-        order= SubcriptionInfo.objects.get(order_id=order_id)
-
-        if order_id == order.order_id:
-            order.paid = True
-            order.payment_id= payment_id
-            order.save()
-
-            user= order.user
-            user_profile = UserProfile.objects.get(user=user)
-
-            user_profile.is_subscriber = True
-            subscription_type= order.subscription_type
-            user_profile.subscription_start_date = timezone.now()
-
-            if subscription_type == 'monthly':
-                user_profile.subscription_end_date = timezone.now() + timezone.timedelta(days=30)  # 30 days subscription
-            else:
-                user_profile.subscription_end_date = timezone.now() + timezone.timedelta(days=365)  # 365 days subscription
-
-            user_profile.save()
-
-    return render(request, "main/index.html")
 
 
 @csrf_exempt
-def redirect(request):
+def success(request):
     if request.method =="POST":
         data= request.POST
         if 'error[code]' in data:
