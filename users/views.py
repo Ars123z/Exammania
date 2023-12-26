@@ -124,6 +124,7 @@ def success(request):
             payment_id = parsed_dict.get('payment_id')
             order_id = parsed_dict.get('order_id')
             data= {"code": error_code, "description": error_description, "payment_id":payment_id, "order_id":order_id}
+            user= order.user
             user_email = user.email
             subject = 'Payment Failed'
             message = 'Payment Failed.Money will be refunded to you eithin a week if deducted'
