@@ -1,1 +1,24 @@
 7c7917fd5ad04e479497680c43e9b2fd
+Razorpay keys
+=========================
+key_id,key_secret
+rzp_test_D1XgJg5irfvjg1,9VRwJqkvPzeqiD21h2Q6qwKb
+===================================
+these pages are required
+ About us,T&C,Shipping,Refunds,Privacy policy,Pricing,Cancellation,contact us
+ ===========================================
+
+ shipping pages
+ ====
+ https://merchant.razorpay.com/policy/NGxBcie3jk9k2t/shipping
+
+ refund
+ http://arsalan786.pythonanywhere.com
+
+ privacy-policy page requirements
+ ==============================
+     What personal information you collect from your website/app users
+    How you collect the information
+    How you use any collected information
+    How you keep information safe
+    Clauses on information sharing with any third parties

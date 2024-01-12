@@ -1,0 +1,12 @@
+The nth A.M between b and b is|the answer is $a + \frac{n\cdot (b - a}{n + 1}$|medium|$\frac{b - a}{n + 1}$|$\frac{n\cdot(b - a)}{n + 1}$|$a + \frac{b - a}{n + 1}$|$a + \frac{n\cdot (b - a)}{n + 1}$|$a + \frac{n\cdot (b - a)}{n + 1}$
+If a and b are the first and last term of an A.P, the sum of n arithmetic means between a and b is|the answer is $\frac{n\cdot (a + b)}{2}$|medium|a + b|$\frac{n\cdot (a + b)}{2}$|$n\cdot a + \frac{n^{2}\cdot (b - a)}{n + 1}$|$n\cdot a + \frac{n\cdot (b - a)}{n + 1}$|$\frac{n\cdot (a + b)}{2}$
+The 4 A.M's between -7 and 3 are|the answer is -5, -3, -1, 1|medium|-6, -4, -2, 0|-5, -3, -1, 1|-4, -2, 0, 2|none of these|-5, -3, -1, 1
+If $\frac{x^{p + 1} + y^{p + 1}}{x^{p} + y^{p}}$ be the arithmetic mean between x and y. The value of p is|the answer is 0|medium|1|0|-1|2|0
+If $\frac{x^{p} + y^{p}}{x^{p - 1} + y^{p - 1}}$ be the A.M between x and y value of p is|the answer is 1|medium|1|0|-1|2|0
+If the AM of two numbers is twice the GM, the two numbers will be in the ratio|the answer is $\frac{2 + \sqrt{3}}{2 - \sqrt{3}}$|medium|$\frac{3 + \sqrt{2}}{3 - \sqrt{2}}$|$\frac{2 + \sqrt{3}}{2 - \sqrt{3}}$|$\frac{2 - \sqrt{3}}{2 + \sqrt{3}}$|$\frac{3 - \sqrt{2}}{3 + \sqrt{2}}$|$\frac{2 + \sqrt{3}}{2 - \sqrt{3}}$
+If n geometric means be inserted into numbers a and b, then the product is|the answer is $(a\cdot b)^{\frac{n}{2}}$|medium|$(a\cdot b)^{\frac{1}{2}}$|$(a\cdot b)^{n}$|$(a\cdot b)^{\frac{n}{2}}$|$(a\cdot b)^{2n}$|$(a\cdot b)^{\frac{n}{2}}$
+The value of n such that $\frac{a^{n + 1} + b^{n + 1}}{a^{n} + b^{n}}$ may be the G.M between a and b is|the answer is $-\frac{1}{2}$|medium|-1|0|$\frac{1}{2}$|$-\frac{1}{2}$|$-\frac{1}{2}$
+A.M of two numbers is greater than their GM by 4 and their HM is $\frac{15}{17}$ of their G.M, the numbers are|the answer is 50, 18|medium|40, 28|48, 16|50, 18|42, 26|50, 18
+If $0 \lt x \lt \frac{pi}{2}$, then sinx + cosecx is|the answer is $\geq 2$|medium|$\gt 2$|$\lt 2$|$\geq 2$|$\leq 2$|$\geq 2$
+If quantities 2, a, b, c, d, e, 8 are in A.P, then a + b + c + d + e is|the answer is 25|medium|10|20|25|none of these|25
+If 1, x, y, z, 2 are in G.P, then $x\cdot y\cdot z$ is|the answer is none of these|medium|4|2|8|none of these|none of these

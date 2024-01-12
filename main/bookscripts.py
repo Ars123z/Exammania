@@ -2,10 +2,10 @@ import csv
 from .models import BookQuestion, BookQuestionOption, Exercise
 
 def populate_database(csv_file_path):
-    exercise_name= "1(L)"
+    exercise_name= "2(C)"
     exercise = Exercise.objects.get(name=exercise_name)
     with open(csv_file_path, 'r', encoding='utf-8') as file:
-        reader = csv.reader(file)
+        reader = csv.reader(file, delimiter="|")
         for row in reader:
         # Get the exam name and year.
         

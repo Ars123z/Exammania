@@ -75,7 +75,7 @@ def subscribe(request, subscription_type):
     
     try:
         client = razorpay.Client(auth=("rzp_test_D1XgJg5irfvjg1", "9VRwJqkvPzeqiD21h2Q6qwKb"))
-        payment = client.order.create({'amount': calculate_subscription_amount(subscription_type), "currency": "INR", "payment_capture": "1", "method":"upi"})
+        payment = client.order.create({'amount': calculate_subscription_amount(subscription_type), "currency": "INR", "payment_capture": "1"})
 
         # Fetch existing or create a new SubscriptionInfo instance
         subscription_info = SubcriptionInfo.objects.create(
@@ -107,10 +107,6 @@ def subscribe(request, subscription_type):
 
 def join(request):
     return render(request, "users/join.html")
-
-
-
-
 
 @csrf_exempt
 def success(request):
@@ -169,3 +165,15 @@ def success(request):
 
 
     return render(request, "users/payment_success.html", {"data":data})
+
+def about_us(request):
+    return render(request, "users/about_us.html")
+
+def contact_us(request):
+    return render(request, "users/contact_us.html")
+
+def privacy_policy(request):
+    return render(request, "users/privacy_policy.html")
+
+def terms_of_use(request):
+    return render(request, "users/terms_of_use.html")

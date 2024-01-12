@@ -1,0 +1,35 @@
+$\sqrt{i}$=|the answer is $\pm \frac{1}{\sqrt{2}}(1 + i)$|easy|$\pm \frac{1}{\sqrt{2}}(1 + i)$|1 + i|1 - i|$\pm (1 + i)$|$\pm \frac{1}{\sqrt{2}}(1 + i)$
+$2 + 3i$ has three cube roots out of which|the answer is all are imaginary|easy|2 real and 1 imaginary|2 imaginary 1 real|all the three will be real|all the three will be imaginary|all the three will be imaginary
+$\sqrt{i}\cdot \sqrt{-i}$=|the answer is 1|easy|1|-1|$\frac{1}{\sqrt{2}}(1 + i)$|$-\frac{1}{\sqrt{2}}(1 + i)$|1
+$\sqrt{i} + \sqrt{-i}$|the answer is $\pm \sqrt{2}$|easy|$\sqrt{2}$|$-\sqrt{2}$|$\pm \sqrt{2}$|none of these|$\pm \sqrt{2}$
+$12i^{2} - 4i^{3} + 8i^{4} +4i^{5}$=|the answer is -4|easy|1|0|4|-4|-4
+$\frac{3 + 5i}{7 - 6i}$ in the form x + iy will be|the answer is $\frac{-9}{85} + \frac{53}{85}$|easy|$\frac{-9}{85} + \frac{53}{85}$|$\frac{53}{85} + \frac{9}{85}$|$\frac{9}{85} + \frac{53}{85}$|$\frac{9}{85} - \frac{53}{85}$|$\frac{-9}{85} + \frac{53}{85}$
+If (4 + 3i)(3 + 4i)= x + iy then (x, y)|the answer is (-8, 19)|easy|(-8, 19)|(-8, -19)|(8, 19)|(8, -19)|(-8, 19)
+$\left(\frac{1 + i}{1 - i}\right)^{300}=$|the answer is 1|easy|1|-1|2i|i|1
+If $\alpha= (a, b), \beta= (c, d)$ then Im($\alpha \cdot \beta$)|the answer is ad + bc|easy|ad + bc|ad - bc|ab + dc|ab - dc|ad + bc
+If z= $\frac{(1 + i)^{2}}{3 - i}$ then Re(z)|the answer is none of these|easy|$\frac{1}{5}$|$\frac{1}{3}$|$-\frac{1}{3}$|none of these|none of these
+$\sqrt{-6} \sqrt{-6}$=|the answer is -6|easy|-6|6i|6|-6i|-6
+If $a\gt 0, b\gt 0$ then $\sqrt{-a}\cdot \sqrt{b}$|the answer is $-\sqrt{ab}$|easy|$-\sqrt{ab}$|$\sqrt{ab}i$|$\sqrt{ab}$|none of these
+Cube roots of unity are|the answer is $1, \frac{-1 + \sqrt{2}i}{2}, \frac{-1 - \sqrt{2}i}{2}$|easy|$1, \frac{-1 + \sqrt{2}i}{2}, \frac{-1 - \sqrt{2}i}{2}$|$1, \frac{-1 + \sqrt{3}i}{2}, \frac{-1 - \sqrt{3}i}{2}$|$1, \frac{-1 + \sqrt{5}i}{2}, \frac{-1 - \sqrt{5}i}{2}$|$1, \frac{1 + \sqrt{3}i}{2}, \frac{1 - \sqrt{3}i}{2}$|$1, \frac{-1 + \sqrt{2}i}{2}, \frac{-1 - \sqrt{2}i}{2}$
+The cube roots of unity are connected by the relation|the answer is $\omega^{3}= 1$, $1 + \omega + \omega^{2}= 0$|easy|$\omega^{3}= 1$, $1 + \omega = \omega^{2}$|$\omega^{2}= 1$, $1 + \omega + \omega^{2}= 0$|$\omega^{3}= 1$, $\omega + \omega^{2}= 1$|$\omega^{3}= 1$, $1 + \omega + \omega^{2}= 0$|$\omega^{3}= 1$, $1 + \omega + \omega^{2}= 0$
+$x + \frac{1}{x}= 1$, then $x^{20} + x^{30} + x^{40}=$|the answer is 0|easy|0|7|$\sqrt{3}$|3\cdot \sqrt{3}|0
+If $1$, $\omega$, $\omega^{2}$ are the cube roots of unity then $(a + b)^{2} + (a\omega + b\omega^{2})^{2} + (a\omega^{2} + b\omega)^{2}$|the answer is 6ab|easy|ab|3ab|6ab|9ab|6ab
+$\left(\frac{i + \sqrt{3}}{1 - \sqrt{3}}\right)^{200} + \left(\frac{i + \sqrt{3}}{1 - \sqrt{3}}\right)^{200}$=|the answer is -1|medium|1|-1|0|2|-1
+$(1 + \omega - \omega^{2})^{3} - (1 - \omega + \omega^{2})^{3}$=|the answer is 0|easy|0|-1|-16|32|0
+$(1 + \omega - \omega^{2})^{6}$|the answer is 64|medium|16|32|64|128|64
+$(x + y)(x - \omega y)(x - \omega^{2} y)$|the answer is $x^{3} - y^{3}$|easy|$x^{2} - y^{2}$|$x^{3} + y^{3}$|$x^{2} - xy + y^{2}$|$x^{3} - y^{3}$|$x^{3} - y^{3}$
+If $1$, $\omega$, $\omega^{2}$ are the cube roots of unity then the roots of the equation $(x - 1)^{3} - 8= 0$ are|the answer is $-1,\;1 - 2\omega ,\;1 - 2\omega^{2}$|medium|$-1,\;1 - 2\omega ,\;1 - 2\omega^{2}$|$-1,\;1 + 2\omega ,\;1 + 2\omega^{2}$|1, -1, -1|none of these|$-1,\;1 - 2\omega ,\;1 - 2\omega^{2}$
+If $\omega$ be an imaginary cube root of 1 and $f(x)= 1 + x + x^{2}$ then f($\omega$)=|the answer is 0|easy|3|0|1|none of these|0
+If $\omega$ be an imaginary cube root of 1, then $\frac{a + b\omega + c\omega^{2}}{c + a\omega + b\omega^{2}} + \frac{a + b\omega + c\omega^{2}}{b + c\omega + a\omega^{2}}$|the answer is -1|easy|1|0|2|-1|-1
+If $\alpha$, $\beta$are the roots of the equation $x + \frac{1}{x}= 1$, then ($\alpha$, $\beta$)|the answer is $\frac{1 - \sqrt{-3}}{2}$, $\frac{1 + \sqrt{-3}}{2}$|easy|$\frac{1 + \sqrt{-3}}{2}$|$\frac{1 - \sqrt{-3}}{2}$|$\frac{-1 + \sqrt{-3}}{2}$|$\frac{-1 - \sqrt{-3}}{2}$|$\frac{1 - \sqrt{-3}}{2}$|$\frac{1 + \sqrt{-3}}{2}$
+The polar form of the complex is|the answer is $r\cdot (cos\theta + sin\theta)$|easy|$cos\theta + sin\theta$|$sin\theta + cos\theta$|$r\cdot (cos\theta + sin\theta)$|$r\cdot (sin\theta + cos\theta)$|$r\cdot (cos\theta + sin\theta)$
+The modulus of the complex number x + iy is|the answer is $\sqrt{x^{2} + y^{2}}$|easy|$-\sqrt{x^{2} + y^{2}}$|$\sqrt{x^{2} + y^{2}$|$\pm \sqrt{x^{2} + y^{2}$|$x^{2} + y^{2}$|$\sqrt{x^{2} + y^{2}$
+The amplitude $\theta$ of a Complex number has|the answer is infinite number of values|easy|only one value|two values|finite number of values|infinite number of values|infinite number of values
+The modulus amplitude form of the complex number 1 + i is|the answer is $\sqrt{2}(cos\frac{\pi}{4} + sin\frac{\pi}{4})$|easy|$2(cos\frac{\pi}{2} + sin\frac{\pi}{2})$|$\sqrt{2}(cos\frac{\pi}{2} + sin\frac{\pi}{2})$|$\sqrt{2}(cos\frac{\pi}{4} + sin\frac{\pi}{4})$|$\sqrt{2}(cos\frac{\pi}{3} + sin\frac{\pi}{3})$|$\sqrt{2}(cos\frac{\pi}{4} + sin\frac{\pi}{4})$
+The modulus amplitude form of the complex number $-\sqrt{3} + i$ is|the answer is $2(cos\frac{5\pi}{6} + sin\frac{5\pi}{6})$|easy|$2(cos\frac{\pi}{6} + sin\frac{\pi}{6})$|$2(cos\frac{5\pi}{6} + sin\frac{5\pi}{6})$|$\sqrt{2}(cos\frac{5\pi}{6} + sin\frac{5\pi}{6})$|$2(cos\frac{5\pi}{6} - sin\frac{5\pi}{6})$|$2(cos\frac{5\pi}{6} + sin\frac{5\pi}{6})$
+If $z= 1 - i$, the principle value of arg(z) is|the answer is $\frac{-\pi}{4}$|easy|$\frac{-\pi}{4}$|$\frac{\pi}{4}$|$\frac{\pi}{2}$|$\frac{-\pi}{2}$|$\frac{-\pi}{4}$
+If $\lvert z \rvert$= 2 and arg(z)= $\frac{\pi}{4}$ then z is|the answer is $\sqrt{2}}(1 + i)$|easy|$\sqrt{2}}(1 + i)$|$\sqrt{2}}(1 - i)$|$\sqrt{3}}(1 + i)$|$\sqrt{3}}(1 - i)$|$\sqrt{2}}(1 + i)$
+If z= $\frsc{(1 - \sqrt{3}i)(cos\theta + i\cdot sin\theta)}{2(1 - i)(cos\theta - i\cdot sin\theta)}$|the answer is $\frac{1}{\srt{2}}$|easy|$\frac{1}{\srt{2}}$|$\frac{1}{2\srt{2}}$|$\frac{1}{\srt{3}}$|none of these|$\frac{1}{\srt{2}}$
+If $\frac{1}{a - ib}= \frac{x - iy}{x + iy}$ then $a^{2} + b^{2}$|the answer is 1|easy|$a^{2} + b^{2}$|1|0|none of these|1
+If $(x^{2} + y^{2})^{2}$= A^{2} + (2xy)^{2} then A^{2}=|the answer $(x^{2} - y^{2})^{2}$|easy|$x^{2} - y^{2}$|$(x^{2} - y^{2})^{2}$|$(2xy)^{2}$|$(x^{2} + y^{2})^{2}$|$(x^{2} - y^{2})^{2}$
+If $z= \frac{1 + i}{\sqrt{2}}$, then $z^{6} + z^{4} + z^{2} + 1=$|the answer is 0|easy|1|2|3|0|0
