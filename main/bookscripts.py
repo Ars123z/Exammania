@@ -2,7 +2,7 @@ import csv
 from .models import BookQuestion, BookQuestionOption, Exercise
 
 def populate_database(csv_file_path):
-    exercise_name= "2(C)"
+    exercise_name= "3(A)"
     exercise = Exercise.objects.get(name=exercise_name)
     with open(csv_file_path, 'r', encoding='utf-8') as file:
         reader = csv.reader(file, delimiter="|")

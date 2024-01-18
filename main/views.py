@@ -64,6 +64,7 @@ def exercisesolution(request, book_name, chapter_name, exercise_name, question_n
     # Use get_object_or_404 to retrieve the specific exercise for the given chapter
     exercise = get_object_or_404(Exercise, chapter=chapter, name=exercise_name)
     questions = exercise.questions.all()
+    total_count = exercise.questions.all().count()
 
     
     question= questions[question_no]
@@ -83,8 +84,8 @@ def exercisesolution(request, book_name, chapter_name, exercise_name, question_n
         "options":question.options.all(),
         "correct_options":question.correct_options.all(),
         "level":question.difficulty_level,
-        "no":no
-        
+        "no":no,
+        "count": total_count
         
     }
 
