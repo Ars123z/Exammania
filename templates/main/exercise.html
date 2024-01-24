@@ -9,19 +9,21 @@
     <div class="row">
         {% for option in options %}
         <div class="col-lg-6 col-md-6 col-sm-12">
-            <span style="display: inline-block; height: 2em;margin-bottom: 10px;">{{forloop.counter}}.&nbsp;</span>
+            <div class="option" data-option="{{ forloop.counter }}">
             {% if option in correct_options %}
-            <span
-                style="font-style: italic; font-size: 1em; display: inline-block; height: 2em; border: 1px solid red; margin-bottom:10px; padding-left: 5px; padding-right: 10px; border-radius: 10px; width: 220px;"
-                class="answer">{{ option.content }}</span>
+            <div
+                style="font-style: italic; font-size: 1em; display: inline-block; border: 1px solid red; margin-bottom:10px; padding-left: 5px; padding-top: 15px; padding-bottom: 15px; padding-right: 10px; border-radius: 10px;"
+                class="answer">{{ forloop.counter }}.&nbsp;&nbsp;{{ option.content }}</div>
             {% else %}
-            <span
-                style="font-style: italic; font-size: 1em; display: inline-block; height: 2em; border: 1px solid red; margin-bottom:10px; padding-left: 5px; padding-right: 10px; border-radius: 10px; width: 220px;"
-                class="wrong">{{ option.content }}</span>
+            <div
+                style="font-style: italic; font-size: 1em; display: inline-block; border: 1px solid red; margin-bottom:10px; padding-left: 5px; padding-bottom: 15px; padding-top: 15px; padding-right: 10px; border-radius: 10px;"
+                class="wrong">{{ forloop.counter }}.&nbsp;&nbsp; {{ option.content }}</div>
             {% endif %}
+            </div>
         </div>
         {% endfor %}
     </div>
+</div>
 </div>
 <div class="container">
     <div class="row">
@@ -76,6 +78,21 @@
 
 {% block script %}
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const optionElements = document.querySelectorAll('.option');
+
+    optionElements.forEach(function (optionElement) {
+        optionElement.addEventListener('click', function () {
+            const childDiv = optionElement.querySelector('.answer, .wrong');
+
+            if (childDiv) {
+                // Change the background color of the child div based on correctness.
+                childDiv.style.backgroundColor = childDiv.classList.contains('answer') ? 'green' : 'red';
+            }
+        });
+    });
+});
+
     function showAnswer() {
         // Get all elements with the `.answer` class.
         const answerElements = document.querySelectorAll('.answer');
