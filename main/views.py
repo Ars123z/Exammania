@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Exam, Book, Chapter, Exercise, ExamQuestion
+from .models import Exam, Book, Chapter, Exercise, ExamQuestion, UserSubmittedBookAnswer, BookQuestionFeedback
 from django.contrib import messages
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponseBadRequest, HttpResponseNotAllowed, JsonResponse
 from django.urls import reverse
 from random import sample
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
 from users.models import UserProfile
+from django.views.decorators.csrf import csrf_exempt
+import json
 
 
 def index(request):
@@ -242,4 +244,49 @@ def review_test(request):
     }
 
     return render(request, 'main/review_test.html', context)
+
+@csrf_exempt
+def feedback(request):
+    if request.method == 'POST':
+        print(request)
+        try:
+            json_string = request.body.decode('utf-8')
+          # Decode to string
+            data = json.loads(json_string)
+             # Parse JSON string
+            # Access and use the data:
+            if 'feedback' in data:
+              print(data)
+              print(f"feedback {data.get('feedback')}")
+              answer_obj = BookQuestionFeedback(
+                    book=data.get('book'),
+                    chapter=data.get('chapter'),
+                    exercise=data.get('exercise'),
+                    no=data.get('no'),
+                    feedback=data.get('feedback'),  # Assign answer text
+                )
+              answer_obj.save()
+
+            else:
+              print(data)
+              print(f"answer {data.get('answer')}")
+              answer_obj = UserSubmittedBookAnswer(
+                    book=data.get('book'),
+                    chapter=data.get('chapter'),
+                    exercise=data.get('exercise'),
+                    no=data.get('no'),
+                    answer=data.get('answer'),  # Assign answer text
+                )
+            answer_obj.save()
+               
+            
+            
+            # ... handle other fields, validation, etc.
+            return JsonResponse({'success': True, 'message': 'Data processed successfully'})
+        except:
+           return JsonResponse({'success': False, 'error': 'Invalid request method'})
+        
+    else:
+        # Handle other HTTP methods or error cases
+        return HttpResponseNotAllowed(['POST'])
 

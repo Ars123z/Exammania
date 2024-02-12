@@ -17,7 +17,8 @@ urlpatterns = [
     path('generate-test/<str:subject>/', views.generate_test, name='generate_test'),
     path('test/<str:subject>/<str:question_ids>/', views.test_page, name='test_page'),
     path('submit-test/',views.submit_test, name='submit_test'),
-    path('review-test/', views.review_test, name="review_test")
+    path('review-test/', views.review_test, name="review_test"),
+    path('feedback/', views.feedback, name="feedback"),
 ]
 
 

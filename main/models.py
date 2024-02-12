@@ -91,6 +91,20 @@ class Exercise(models.Model):
 
     def __str__(self):
         return self.name
+    
+class UserSubmittedBookAnswer(models.Model):
+    answer = models.TextField()
+    book = models.CharField(max_length=250)
+    chapter = models.CharField(max_length=250)
+    exercise = models.CharField(max_length=250)
+    no= models.IntegerField()
+
+class BookQuestionFeedback(models.Model):
+    feedback = models.TextField()
+    book = models.CharField(max_length=250)
+    chapter = models.CharField(max_length=250)
+    exercise = models.CharField(max_length=250)
+    no= models.IntegerField()
 
 
     

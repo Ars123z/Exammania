@@ -23,3 +23,6 @@ admin.site.register(BookQuestion, BookQuestionAdmin)
 admin.site.register(Exercise, ExerciseAdmin)
 admin.site.register(Chapter)
 admin.site.register(Book)
+
+admin.site.register(UserSubmittedBookAnswer)
+admin.site.register(BookQuestionFeedback)
