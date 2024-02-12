@@ -138,7 +138,7 @@ def notes_details(request, subject, topic, chapter):
         return HttpResponseRedirect(reverse('join'))
 
 
-
+@login_required
 def generate_test(request, subject):
     user_profile = UserProfile.objects.get(user=request.user)
     if user_profile.is_subscriber:

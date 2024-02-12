@@ -1,10 +1,52 @@
 {% extends "main/base.html" %}
+
+{% block extrahead %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.3/tinymce.min.js" integrity="sha512-VCEWnpOl7PIhbYMcb64pqGZYez41C2uws/M/mDdGPy+vtEJHd9BqbShE4/VNnnZdr7YCPOjd+CBmYca/7WWWCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+tinymce.init({
+    selector: '#feedbacktext',
+    plugins: 'a11ychecker advcode advlist anchor autolink codesample colorpicker contextmenu fullscreen help image imagetools lists media paste powerpaste preview save searchreplace table template textcolor visualblocks wordcount',
+    toolbar: 'undo redo | blocks | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | indent outdent | numlist bullist | link image media | forecolor backcolor | help',
+    menubar: false, // Hide the default menubar (optional)
+    content_style: `
+                 body {
+                  background-color: white;
+                  color:black;
+                 }
+                 `,
+});
+</script>
+
+<script>
+    tinymce.init({
+        selector: '#conanswertext',
+        plugins: 'a11ychecker advcode advlist anchor autolink codesample colorpicker contextmenu fullscreen help image imagetools lists media paste powerpaste preview save searchreplace table template textcolor visualblocks wordcount',
+        toolbar: 'undo redo | blocks | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | indent outdent | numlist bullist | link image media | forecolor backcolor | help',
+        menubar: false, 
+        content_style: `
+                 body {
+                  background-color: white;
+                  color: black;
+                 }
+                 `,
+    });
+</script>
+<style>
+    .feedback .feedback-area {
+         font-size: 1.2em;
+    }
+    
+</style>
+{% endblock %}
+
 {% block body %}
 <div id="mainblock" class="container body">
     <h1 style="color:aliceblue; font-style: italic; text-align: center;">{{Chapter.name}}<span style="margin-left: 15px;">{{Exercise.name}}</span></h1>
     <p style="font-style: italic;color:orange;font-size: 1em;">Q{{no}}.&nbsp;{{body|safe}}</p>
     <p style="font-size: o.8em;">{{level}}</p>
 </div>
+
 <div class="container options">
     <div class="row">
         {% for option in options %}
@@ -12,11 +54,11 @@
             <div class="option" data-option="{{ forloop.counter }}">
             {% if option in correct_options %}
             <div
-                style="font-style: italic; font-size: 1em; display: inline-block; border: 1px solid red; margin-bottom:10px; padding-left: 5px; padding-top: 15px; padding-bottom: 15px; padding-right: 10px; border-radius: 10px;"
+                style="font-style: italic; font-size: 1em; display: inline-block; border: 1px solid red; margin-bottom:10px; padding-left: 5px; padding-top: 15px; padding-bottom: 15px; padding-right: 10px; border-radius: 10px; cursor:pointer"
                 class="answer">{{ forloop.counter }}.&nbsp;&nbsp;{{ option.content }}</div>
             {% else %}
             <div
-                style="font-style: italic; font-size: 1em; display: inline-block; border: 1px solid red; margin-bottom:10px; padding-left: 5px; padding-bottom: 15px; padding-top: 15px; padding-right: 10px; border-radius: 10px;"
+                style="font-style: italic; font-size: 1em; display: inline-block; border: 1px solid red; margin-bottom:10px; padding-left: 5px; padding-bottom: 15px; padding-top: 15px; padding-right: 10px; border-radius: 10px; cursor:pointer"
                 class="wrong">{{ forloop.counter }}.&nbsp;&nbsp; {{ option.content }}</div>
             {% endif %}
             </div>
@@ -25,16 +67,62 @@
     </div>
 </div>
 </div>
+
 <div class="container">
     <div class="row">
         <button type="button" onclick="showSolution()" style="display:none; width:150px;" id="solutionButton">Show
             Solution</button>
     </div>
 </div>
+
 <div class="container ans" style="display:none">
     <div class="row">
         <p style="font-style: italic;color:white;font-size: 1em;"><span
                 style="color:orange;">Solution:</span>&nbsp;{{answer|safe}}</p>
+    </div>
+
+    <div class="container">
+        <div class="row d-flex justify-content-between">
+          <div class="col-auto text-left">
+            <button type="button" onclick="showFeedback()" class="btn btn-primary">Give feedback</button>
+          </div>
+          <div class="col-auto text-right">
+            <button type="button" onclick="contributeAnswer()" class="btn btn-primary">Contribute Answer</button>
+          </div>
+        </div>
+    </div>
+      
+
+    <div class="container mt-3 feedback" style="display:none">
+        
+        <div class="feedback-area">
+            <h2>Feedback</h2>
+            <p>Please share your thoughts and suggestions to help us improve.</p>
+            <form id="feedback-form">
+                <input type="hidden" id="book_id" value="{{ Book }}">
+                <input type="hidden" id="chapter_id" value="{{ Chapter }}">
+                <input type="hidden" id="exercise_id" value="{{ Exercise }}">
+                <input type="hidden" id="no_id" value="{{ no }}">
+              <textarea name="feedback" id= "feedbacktext" placeholder="Enter your feedback..."></textarea>
+              <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container mt-3 contributeanswer" style="display:none">
+        
+        <div class="conans-area">
+            <h2>Contribute Answer</h2>
+            <p>Please share your Answer to help us improve.</p>
+            <form id="conans-form">
+                <input type="hidden" id="book_id" value="{{ Book }}">
+                <input type="hidden" id="chapter_id" value="{{ Chapter }}">
+                <input type="hidden" id="exercise_id" value="{{ Exercise }}">
+                <input type="hidden" id="no_id" value="{{ no }}">
+              <textarea name="conanswer" id= "conanswertext" placeholder="Enter your feedback..."></textarea>
+              <button type="submit">Submit Answer</button>
+            </form>
+        </div>
     </div>
 </div>
 
@@ -43,6 +131,7 @@
         <button type="button" onclick="showAnswer()" style="width:150px">Show Answer</button>
     </div>
 </div>
+
 
 <div class="container mt-3">
     <nav aria-label="Page navigation example">
@@ -112,6 +201,7 @@
         const solutionButton = document.getElementById('solutionButton');
         solutionButton.style.display = 'block'
     }
+
     function showSolution() {
         // Get the solution div element
         const solutionDiv = document.querySelector('.ans');
@@ -124,5 +214,105 @@
         }
     }
 
+    function showFeedback() {
+        const feedback = document.querySelector('.feedback');
+
+        if (feedback.style.display === 'none' || feedback.style.display === '') {
+            feedback.style.display = 'block';
+        } else {
+            feedback.style.display = 'none';
+        }
+    }
+
+    function contributeAnswer() {
+        const answer = document.querySelector('.contributeanswer');
+
+        if (answer.style.display === 'none' || answer.style.display === '') {
+            answer.style.display = 'block';
+        } else {
+            answer.style.display = 'none';
+        }
+    }
+</script>
+
+
+<script>
+    const form = document.querySelector('#feedback-form');
+    form.addEventListener('submit', event => {
+        event.preventDefault();
+        const book = document.getElementById('book_id').value;
+        const chapter = document.getElementById('chapter_id').value;
+        const exercise = document.getElementById('exercise_id').value;
+        const no = document.getElementById('no_id').value;
+        const feedbackContent = tinymce.get('feedbacktext').getContent()
+        const data = {
+        feedback: feedbackContent,
+        book: book,
+        chapter: chapter,
+        exercise: exercise,
+        no: no,
+    };
+    console.log(data)
+        fetch('/home/feedback/', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+      },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(response => {
+      if (response.success) {
+        alert('Feedback submitted successfully!');
+        form.reset(); // Clear the form
+      } else {
+        alert('Error submitting feedback: ' + response.error);
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert('An error occurred: Please try again later.');
+    });
+    })
+</script>
+
+<script>
+    const form2 = document.querySelector('#conans-form');
+        form2.addEventListener('submit', event => {
+        event.preventDefault();
+        const book = document.getElementById('book_id').value;
+        const chapter = document.getElementById('chapter_id').value;
+        const exercise = document.getElementById('exercise_id').value;
+        const no = document.getElementById('no_id').value;
+        const conanswerContent = tinymce.get('conanswertext').getContent()
+        const data = {
+        answer: conanswerContent,
+        book: book,
+        chapter: chapter,
+        exercise: exercise,
+        no: no,
+    };
+    console.log(data)
+        fetch('/home/feedback/', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+      },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(response => {
+      if (response.success) {
+        alert('Answer submitted successfully!');
+        form2.reset(); // Clear the form
+      } else {
+        alert('Error submitting answer: ' + response.error);
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert('An error occurred: Please try again later.');
+    });
+    })
 </script>
 {% endblock %}

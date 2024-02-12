@@ -1,4 +1,31 @@
 {% extends "main/base.html" %}
+
+{% block extrahead %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.3/tinymce.min.js" integrity="sha512-VCEWnpOl7PIhbYMcb64pqGZYez41C2uws/M/mDdGPy+vtEJHd9BqbShE4/VNnnZdr7YCPOjd+CBmYca/7WWWCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+tinymce.init({
+    selector: '#feedbacktext',
+    plugins: 'a11ychecker advcode advlist anchor autolink codesample colorpicker contextmenu fullscreen help image imagetools lists media paste powerpaste preview save searchreplace table template textcolor visualblocks wordcount',
+    toolbar: 'undo redo | blocks | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | indent outdent | numlist bullist | link image media | forecolor backcolor | help',
+    menubar: false // Hide the default menubar (optional)
+});
+</script>
+
+<script>
+    tinymce.init({
+        selector: '#conanswertext',
+        plugins: 'a11ychecker advcode advlist anchor autolink codesample colorpicker contextmenu fullscreen help image imagetools lists media paste powerpaste preview save searchreplace table template textcolor visualblocks wordcount',
+        toolbar: 'undo redo | blocks | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | indent outdent | numlist bullist | link image media | forecolor backcolor | help',
+        menubar: false, // Hide the default menubar (optional)
+    });
+</script>
+<style>
+    .feedback .feedback-area {
+         font-size: 1.2em;
+}
+</style>
+{% endblock %}
 {% block body %}
 <div id="mainblock" class="container body">
   <h1 style="text-align:center">{{subject|upper}}</h1>
@@ -9,17 +36,16 @@
   <div class="row">
     {% for option in options %}
     <div class="col-lg-6 col-md-6 col-sm-12">
-      <div class="option" data-option="{{ forloop.counter }}">
+      <span style="display: inline-block; height: 2em;margin-bottom: 10px;">{{forloop.counter}}.&nbsp;</span>
       {% if option in correct_options %}
-      <div
-      style="font-style: italic; font-size: 1em; display: inline-block; border: 1px solid red; margin-bottom:10px; padding-left: 5px; padding-top: 15px; padding-bottom: 15px; padding-right: 10px; border-radius: 10px;"
-      class="answer">{{ forloop.counter }}.&nbsp;&nbsp;{{ option.content|safe }}</div>
+      <span
+        style="font-style: italic; font-size: 1em; display: inline-block; height: 2em; border: 1px solid red; margin-bottom:10px; padding-left: 5px; padding-right: 10px; border-radius: 10px; width: 220px;"
+        class="answer">{{ option.content|safe }}</span>
       {% else %}
-      <div
-      style="font-style: italic; font-size: 1em; display: inline-block; border: 1px solid red; margin-bottom:10px; padding-left: 5px; padding-bottom: 15px; padding-top: 15px; padding-right: 10px; border-radius: 10px;"
-      class="wrong">{{ forloop.counter }}.&nbsp;&nbsp;{{ option.content|safe }}</div>
+      <span
+        style="font-style: italic; font-size: 1em; display: inline-block; height: 2em; border: 1px solid red; margin-bottom:10px; padding-left: 5px; padding-right: 10px; border-radius: 10px; width: 220px;"
+        class="wrong">{{ option.content|safe }}</span>
       {% endif %}
-    </div>
     </div>
     {% endfor %}
   </div>
@@ -30,11 +56,53 @@
       Solution</button>
   </div>
 </div>
+
 <div class="container ans" style="display:none">
   <div class="row">
     <p style="font-style: italic;color:white;font-size: 1em;"><span
         style="color:orange;">Solution:</span>&nbsp;{{answer|safe}}</p>
   </div>
+  <div class="container">
+    <div class="row d-flex justify-content-between">
+      <div class="col-auto text-left">
+        <button type="button" onclick="showFeedback()" class="btn btn-primary">Give feedback</button>
+      </div>
+      <div class="col-auto text-right">
+        <button type="button" onclick="contributeAnswer()" class="btn btn-primary">Contribute Answer</button>
+      </div>
+    </div>
+</div>
+<div class="container mt-3 feedback" style="display:none">
+        
+  <div class="feedback-area">
+      <h2>Feedback</h2>
+      <p>Please share your thoughts and suggestions to help us improve.</p>
+      <form id="feedback-form">
+          <input type="hidden" id="book_id" value="{{ Book }}">
+          <input type="hidden" id="chapter_id" value="{{ Chapter }}">
+          <input type="hidden" id="exercise_id" value="{{ Exercise }}">
+          <input type="hidden" id="no_id" value="{{ no }}">
+        <textarea name="feedback" id= "feedbacktext" placeholder="Enter your feedback..."></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+  </div>
+</div>
+
+<div class="container mt-3 contributeanswer" style="display:none">
+  
+  <div class="conans-area">
+      <h2>Contribute Answer</h2>
+      <p>Please share your Answer to help us improve.</p>
+      <form id="conans-form">
+          <input type="hidden" id="book_id" value="{{ Book }}">
+          <input type="hidden" id="chapter_id" value="{{ Chapter }}">
+          <input type="hidden" id="exercise_id" value="{{ Exercise }}">
+          <input type="hidden" id="no_id" value="{{ no }}">
+        <textarea name="conanswer" id= "conanswertext" placeholder="Enter your feedback..."></textarea>
+        <button type="submit">Submit Answer</button>
+      </form>
+  </div>
+</div>
 </div>
 
 <div class="container mt-3">
@@ -78,21 +146,6 @@
 
 {% block script %}
 <script>
-   document.addEventListener('DOMContentLoaded', function () {
-    const optionElements = document.querySelectorAll('.option');
-
-    optionElements.forEach(function (optionElement) {
-        optionElement.addEventListener('click', function () {
-            const childDiv = optionElement.querySelector('.answer, .wrong');
-
-            if (childDiv) {
-                // Change the background color of the child div based on correctness.
-                childDiv.style.backgroundColor = childDiv.classList.contains('answer') ? 'green' : 'red';
-            }
-        });
-    });
-});
-
   function showAnswer() {
     // Get all elements with the `.answer` class.
     const answerElements = document.querySelectorAll('.answer');
@@ -123,6 +176,26 @@
       solutionDiv.style.display = 'none';
     }
   }
+
+  function showFeedback() {
+        const feedback = document.querySelector('.feedback');
+
+        if (feedback.style.display === 'none' || feedback.style.display === '') {
+            feedback.style.display = 'block';
+        } else {
+            feedback.style.display = 'none';
+        }
+    }
+
+  function contributeAnswer() {
+        const answer = document.querySelector('.contributeanswer');
+
+        if (answer.style.display === 'none' || answer.style.display === '') {
+            answer.style.display = 'block';
+        } else {
+            answer.style.display = 'none';
+        }
+    }
 
 </script>
 {% endblock %}
